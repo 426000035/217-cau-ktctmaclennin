@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="artifact-type" content="tool">
+<meta name="design-style" content="briefing">
+<title>Trắc Nghiệm Kinh Tế Chính Trị Mác – Lênin (226 Câu)</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --background: #faf9f5;
+  --surface-container-low: #ffffff;
+  --surface-container: #f1efe8;
+  --surface-container-high: #e6e2d6;
+  --on-surface: #17181a;
+  --on-surface-variant: #56585c;
+  --outline: #17181a;
+  --outline-variant: #dedad0;
+  --primary: #17181a;
+  --on-primary: #faf9f5;
+  --primary-container: #f2b705;
+  --on-primary-container: #17181a;
+  --secondary: #1f4e5f;
+  --tertiary: #785008;
+  --error: #b42318;
+  --on-error: #ffffff;
+  --positive: #1d6b43;
+  --positive-bg: #e7f4ed;
+  --error-bg: #fbeae8;
+  --warning: #9a5b00;
+  --warning-bg: #fdf2dc;
+  --focus: #1f4e5f;
+  --data-1: #1f4e5f;
+  --data-2: #d99000;
+  --data-3: #2b6e52;
+  --data-4: #b84a39;
+  --data-context: #c4bfb2;
+  --font-headline: 'Source Serif 4', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-label: 'JetBrains Mono', monospace;
+  --rounded: 0.25rem;
+  --rounded-lg: 0.375rem;
+  --rounded-full: 0.25rem;
+  --section-rule: 1.5px solid var(--outline);
+  --card-border: 1px solid var(--outline-variant);
+  --badge-radius: 2px;
+  --heading-tracking: -0.02em;
+  --label-tracking: 0.06em;
+  --display-size: clamp(1.65rem, 1.3rem + 1.1vw, 2.25rem);
+  --headline-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
+  --subhead-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --body-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+  --label-size: 0.75rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.25rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; margin: 0; padding: 0; background: var(--background); color: var(--on-surface); font-family: var(--font-body); font-size: var(--body-size); line-height: 1.55; }
+header { position: static !important; }
+button, input, select { font-family: inherit; }
+
+.page-shell {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  display: grid;
+  gap: var(--space-lg);
+}
+.page-shell * { min-width: 0; }
+
+.dossier-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  border-bottom: var(--section-rule);
+  padding-bottom: var(--space-sm);
+}
+.dossier-left { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); }
+.dossier-pill {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--badge-radius);
+}
+.dossier-meta {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  color: var(--on-surface-variant);
+}
+
+.hero-head { display: grid; gap: var(--space-xs); }
+.hero-title {
+  margin: 0;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: var(--display-size);
+  letter-spacing: var(--heading-tracking);
+  line-height: 1.12;
+  color: var(--on-surface);
+}
+.hero-standfirst {
+  margin: 0;
+  font-weight: 600;
+  font-size: var(--subhead-size);
+  color: var(--secondary);
+  max-width: 70ch;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-md);
+}
+.figure-card {
+  background: var(--surface-container-low);
+  border: var(--card-border);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-md);
+  display: grid;
+  gap: var(--space-xs);
+}
+.figure-label {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+}
+.figure-value {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--on-surface);
+}
+.figure-sub { font-size: 0.84rem; color: var(--on-surface-variant); }
+.figure-card.is-srs { border-left: 4px solid var(--warning); }
+.figure-card.is-ok { border-left: 4px solid var(--positive); }
+.figure-card.is-main { border-left: 4px solid var(--secondary); }
+
+.controls-bar {
+  background: var(--surface-container);
+  border-top: var(--section-rule);
+  border-bottom: var(--card-border);
+  padding: var(--space-md);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
+  gap: var(--space-md);
+  align-items: end;
+}
+.field-group { display: grid; gap: var(--space-xs); }
+.field-label {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  font-weight: 600;
+  color: var(--on-surface);
+}
+.control-select, .control-input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.55rem 0.75rem;
+  background: var(--surface-container-low);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--rounded);
+  color: var(--on-surface);
+  font-size: 0.92rem;
+}
+.control-select { padding-right: 2rem; cursor: pointer; }
+.control-actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); align-items: center; }
+
+.btn {
+  min-height: 44px;
+  padding: 0.55rem 1rem;
+  border-radius: var(--rounded);
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  transition: background-color var(--dur-micro) var(--ease-out), transform var(--dur-micro) var(--ease-out);
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--primary); color: var(--on-primary); }
+.btn-primary:hover { background: var(--secondary); }
+.btn-secondary { background: var(--surface-container-low); color: var(--on-surface); border-color: var(--outline-variant); }
+.btn-secondary:hover { background: var(--surface-container-high); }
+.btn-warn { background: var(--warning-bg); color: var(--warning); border-color: var(--warning); }
+.btn-warn:hover { background: var(--primary-container); color: var(--on-primary-container); }
+.btn-danger { background: var(--error-bg); color: var(--error); border-color: var(--error); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(290px, 1fr);
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.quiz-card {
+  background: var(--surface-container-low);
+  border: var(--card-border);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-lg);
+  display: grid;
+  gap: var(--space-md);
+}
+.q-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--outline-variant);
+}
+.q-badges { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); }
+.tag {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--badge-radius);
+}
+.tag-chapter { background: var(--surface-container); color: var(--secondary); }
+.tag-srs { background: var(--warning-bg); color: var(--warning); }
+.tag-mastered { background: var(--positive-bg); color: var(--positive); }
+.tag-new { background: var(--surface-container); color: var(--on-surface-variant); }
+.q-index-num { font-family: var(--font-label); font-size: 0.85rem; font-weight: 600; color: var(--secondary); }
+
+.q-stem {
+  margin: 0;
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: var(--headline-size);
+  line-height: 1.38;
+  color: var(--on-surface);
+}
+
+.options-list { display: grid; gap: var(--space-sm); }
+.option-btn {
+  width: 100%;
+  min-height: 48px;
+  text-align: left;
+  padding: 0.8rem var(--space-md);
+  background: var(--background);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--rounded);
+  color: var(--on-surface);
+  font-size: 0.96rem;
+  line-height: 1.45;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: var(--space-sm);
+  align-items: start;
+  transition: background-color var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+}
+.option-btn:hover:not(:disabled) {
+  background: var(--surface-container);
+  box-shadow: inset 3px 0 0 var(--secondary);
+}
+.option-key {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 0.85rem;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--badge-radius);
+  background: var(--surface-container);
+  color: var(--on-surface);
+}
+.option-btn.is-correct {
+  background: var(--positive-bg);
+  border-color: var(--positive);
+  box-shadow: inset 4px 0 0 var(--positive);
+}
+.option-btn.is-correct .option-key { background: var(--positive); color: var(--on-primary); }
+.option-btn.is-wrong {
+  background: var(--error-bg);
+  border-color: var(--error);
+  box-shadow: inset 4px 0 0 var(--error);
+}
+.option-btn.is-wrong .option-key { background: var(--error); color: var(--on-error); }
+.option-btn:disabled { cursor: default; }
+
+.feedback-banner {
+  padding: var(--space-md);
+  border-radius: var(--rounded);
+  border-left: 4px solid var(--secondary);
+  background: var(--surface-container);
+  display: grid;
+  gap: var(--space-xs);
+}
+.feedback-banner.is-ok { border-left-color: var(--positive); background: var(--positive-bg); }
+.feedback-banner.is-err { border-left-color: var(--error); background: var(--error-bg); }
+.feedback-title { font-weight: 700; font-size: 0.95rem; }
+.feedback-detail { font-size: 0.88rem; color: var(--on-surface); }
+
+.q-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--outline-variant);
+}
+
+.aside-panel { display: grid; gap: var(--space-md); }
+.aside-box {
+  background: var(--surface-container-low);
+  border: var(--card-border);
+  border-top: var(--section-rule);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-md);
+  display: grid;
+  gap: var(--space-sm);
+}
+.aside-title {
+  margin: 0;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.srs-list { display: grid; gap: var(--space-xs); max-height: 220px; overflow-y: auto; }
+.srs-item {
+  width: 100%;
+  text-align: left;
+  padding: var(--space-sm);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--rounded);
+  background: var(--background);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.84rem;
+}
+.srs-item:hover { background: var(--surface-container); }
+.srs-item-q { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
+.srs-cycle-badge {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--badge-radius);
+  background: var(--warning-bg);
+  color: var(--warning);
+  white-space: nowrap;
+}
+.srs-cycle-badge.is-due { background: var(--error-bg); color: var(--error); }
+
+.chapter-bars { display: grid; gap: var(--space-sm); }
+.ch-row { display: grid; gap: 3px; font-size: 0.82rem; }
+.ch-row-top { display: flex; justify-content: space-between; gap: var(--space-sm); }
+.ch-track {
+  height: 8px;
+  background: var(--surface-container);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+}
+.ch-fill-ok { background: var(--positive); height: 100%; transition: width var(--dur-short) var(--ease-out); }
+.ch-fill-err { background: var(--data-2); height: 100%; transition: width var(--dur-short) var(--ease-out); }
+
+.nav-grid-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-sm); }
+.nav-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 5px;
+  max-height: 290px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+.q-cell {
+  min-height: 36px;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--badge-radius);
+  background: var(--background);
+  color: var(--on-surface);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.q-cell:hover { background: var(--surface-container-high); }
+.q-cell.is-current { outline: 2px solid var(--primary); outline-offset: -2px; background: var(--primary-container); color: var(--on-primary-container); }
+.q-cell.is-ok { background: var(--positive-bg); border-color: var(--positive); color: var(--positive); }
+.q-cell.is-srs { background: var(--warning-bg); border-color: var(--warning); color: var(--warning); }
+.q-cell.is-due { background: var(--error-bg); border-color: var(--error); color: var(--error); }
+
+.empty-note {
+  padding: var(--space-md);
+  background: var(--surface-container);
+  border-radius: var(--rounded);
+  font-size: 0.88rem;
+  color: var(--on-surface-variant);
+}
+
+.source-foot {
+  border-top: var(--card-border);
+  padding-top: var(--space-md);
+  font-size: 0.82rem;
+  color: var(--on-surface-variant);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 900px) {
+  .workspace { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .page-shell { padding: var(--space-sm); }
+  .quiz-card { padding: var(--space-md); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+<div class="page-shell">
+  <header class="hero-head">
+    <div class="dossier-bar">
+      <div class="dossier-left">
+        <span class="dossier-pill">HỒ SƠ ÔN TẬP</span>
+        <span class="dossier-meta">KINH TẾ CHÍNH TRỊ MÁC – LÊNIN • CHƯƠNG I – VI • 226 CÂU HỎI</span>
+      </div>
+      <span class="dossier-meta" id="sync-status">Chưa có tiến độ lưu</span>
+    </div>
+    <h1 class="hero-title">Hệ Thống Trắc Nghiệm &amp; Nhắc Lại Câu Sai Theo Chu Kỳ</h1>
+    <p class="hero-standfirst">Bao gồm đầy đủ 226 câu hỏi từ Chương I đến Chương VI (đầy đủ phần Chương VI câu 178–226). Mọi câu trả lời sai được tự động ghi nhớ và chèn nhắc lại theo chu kỳ 3 bước cho đến khi nắm vững hoàn toàn.</p>
+  </header>
+
+  <section class="kpi-grid" aria-label="Tổng quan tiến độ">
+    <article class="figure-card is-main">
+      <span class="figure-label">Tiến độ hoàn thành</span>
+      <span class="figure-value" id="stat-mastered">0 / 226</span>
+      <span class="figure-sub" id="stat-mastered-pct">0% bộ câu hỏi đã làm đúng</span>
+    </article>
+    <article class="figure-card is-srs">
+      <span class="figure-label">Hàng đợi nhắc lại (Sai)</span>
+      <span class="figure-value" id="stat-srs-count">0</span>
+      <span class="figure-sub" id="stat-srs-due">0 câu đang đến hạn nhắc lại</span>
+    </article>
+    <article class="figure-card is-ok">
+      <span class="figure-label">Tỷ lệ trả lời đúng</span>
+      <span class="figure-value" id="stat-accuracy">0%</span>
+      <span class="figure-sub" id="stat-attempts">0 lượt trả lời đã ghi nhận</span>
+    </article>
+    <article class="figure-card">
+      <span class="figure-label">Cơ chế chu kỳ nhắc lại</span>
+      <span class="figure-value" id="stat-streak">0</span>
+      <span class="figure-sub">Chuỗi đúng liên tiếp • Sai → ôn 2 vòng đúng</span>
+    </article>
+  </section>
+
+  <section class="controls-bar" aria-label="Bộ lọc và chế độ luyện tập">
+    <div class="field-group">
+      <label class="field-label" for="mode-select">Chế độ học tập</label>
+      <select class="control-select" id="mode-select" onchange="changeMode(this.value)">
+        <option value="smart">Thông minh (Tự động chèn nhắc câu sai)</option>
+        <option value="srs">Chỉ ôn các câu sai theo chu kỳ</option>
+        <option value="seq">Làm tuần tự (Không chèn nhắc lại)</option>
+        <option value="random">Thi thử ngẫu nhiên</option>
+      </select>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="chapter-select">Phạm vi chương</label>
+      <select class="control-select" id="chapter-select" onchange="changeChapter(this.value)">
+        <option value="all">Tất cả 6 chương (Câu 1 – 226)</option>
+        <option value="1">Chương I: Đối tượng &amp; Phương pháp (1 – 28)</option>
+        <option value="2">Chương II: Hàng hóa &amp; Thị trường (29 – 64)</option>
+        <option value="3">Chương III: Giá trị thặng dư (65 – 95)</option>
+        <option value="4">Chương IV: Cạnh tranh &amp; Độc quyền (96 – 124)</option>
+        <option value="5">Chương V: KTTT định hướng XHCN (125 – 177)</option>
+        <option value="6">Chương VI: CNH, HĐH &amp; Hội nhập (178 – 226)</option>
+      </select>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="search-input">Tìm nhanh câu hỏi / số câu</label>
+      <input class="control-input" id="search-input" type="text" placeholder="Nhập số câu (vd: 178) hoặc từ khóa…" oninput="onSearchInput(this.value)">
+    </div>
+    <div class="control-actions">
+      <button type="button" class="btn btn-warn" id="btn-review-due" onclick="jumpToNextDue()">Ôn câu sai ngay (0)</button>
+      <button type="button" class="btn btn-secondary" onclick="exportProgressCsv()">Xuất CSV</button>
+      <button type="button" class="btn btn-danger" id="btn-reset" onclick="handleReset(this)">Đặt lại tiến độ</button>
+    </div>
+  </section>
+
+  <main class="workspace">
+    <section class="quiz-card" aria-live="polite" id="quiz-stage">
+      <div class="q-meta-row">
+        <div class="q-badges">
+          <span class="tag tag-chapter" id="q-chapter-tag">Chương I</span>
+          <span class="tag tag-new" id="q-status-tag">Câu mới</span>
+        </div>
+        <span class="q-index-num" id="q-number-label">Câu 001 / 226</span>
+      </div>
+      <h2 class="q-stem" id="q-stem">Đang tải ngân hàng câu hỏi…</h2>
+      <div class="options-list" id="q-options"></div>
+      <div class="feedback-banner" id="q-feedback" hidden>
+        <div class="feedback-title" id="q-feedback-title"></div>
+        <div class="feedback-detail" id="q-feedback-detail"></div>
+      </div>
+      <div class="q-footer">
+        <div class="control-actions">
+          <button type="button" class="btn btn-secondary" id="btn-prev" onclick="prevQuestion()">Câu trước</button>
+          <button type="button" class="btn btn-secondary" id="btn-skip" onclick="nextQuestion()">Bỏ qua</button>
+        </div>
+        <button type="button" class="btn btn-primary" id="btn-next" onclick="nextQuestion()">Câu tiếp theo</button>
+      </div>
+    </section>
+
+    <aside class="aside-panel">
+      <section class="aside-box">
+        <h3 class="aside-title">Hàng đợi nhắc lại theo chu kỳ</h3>
+        <div id="srs-queue-box" class="srs-list"></div>
+      </section>
+
+      <section class="aside-box">
+        <h3 class="aside-title">Tiến độ theo từng chương</h3>
+        <div id="chapter-progress-box" class="chapter-bars"></div>
+      </section>
+
+      <section class="aside-box">
+        <div class="nav-grid-header">
+          <h3 class="aside-title">Bảng điều hướng (1–226)</h3>
+          <select class="control-select" style="width:auto; min-height:36px; padding:0.25rem 1.8rem 0.25rem 0.5rem; font-size:0.8rem;" id="matrix-filter" onchange="renderMatrix()">
+            <option value="all">Tất cả</option>
+            <option value="srs">Cần ôn lại</option>
+            <option value="unseen">Chưa làm</option>
+            <option value="ok">Đã đúng</option>
+          </select>
+        </div>
+        <div id="nav-matrix" class="nav-matrix"></div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="source-foot">
+    <span>Nguồn nội dung: Tài liệu Câu hỏi trắc nghiệm môn Kinh tế chính trị Mác – Lênin (Chương I đến Chương VI, câu 1–226).</span>
+    <span>Chu kỳ nhắc lại: Sai → Chu kỳ 1 (sau 3 câu) → Đúng → Chu kỳ 2 (sau 7 câu) → Đúng hoàn toàn.</span>
+  </footer>
+</div>
+
+<api-shim></api-shim>
+<script>
+const CHAPTER_NAMES = {
+  1: `Chương I: Đối tượng & Phương pháp (1–28)`,
+  2: `Chương II: Hàng hóa & Thị trường (29–64)`,
+  3: `Chương III: Giá trị thặng dư (65–95)`,
+  4: `Chương IV: Cạnh tranh & Độc quyền (96–124)`,
+  5: `Chương V: KTTT định hướng XHCN (125–177)`,
+  6: `Chương VI: CNH, HĐH & Hội nhập (178–226)`
+};
+
+// Format: [id, chapter, question, [A, B, C, D], correctIndex]
+const RAW_QUESTIONS = [
+[1,1,`Thuật ngữ khoa học kinh tế chính trị được sử dụng lần đầu tiên vào năm nào?`,[`1615`,`1610`,`1618`,`1612`],0],
+[2,1,`Ai là người đầu tiên đưa ra khái niệm "kinh tế - chính trị"?`,[`William Petty`,`Thomas Mun`,`Antoine Montchrétien`,`François Quesnay`],2],
+[3,1,`Kinh tế chính trị Mác – Lênin đã kế thừa và phát triển trực tiếp những thành tựu của trường phái nào dưới đây?`,[`Kinh tế chính trị tư sản cổ điển Anh`,`Chủ nghĩa trọng thương`,`Chủ nghĩa trọng nông`,`Chủ nghĩa xã hội không tưởng`],0],
+[4,1,`Đối tượng nghiên cứu của kinh tế chính trị Mác – Lênin là:`,[`Sản xuất của cải vật chất.`,`Quan hệ xã hội giữa người với người.`,`Quá trình sản xuất, phân phối, trao đổi, tiêu dùng và các quan hệ kinh tế giữa lực lượng sản xuất và kiến trúc thượng tầng.`,`Các quan hệ xã hội của sản xuất và trao đổi trong mối quan hệ tác động qua lại với lực lượng sản xuất và kiến trúc thượng tầng tương ứng của phương thức sản xuất nhất định.`],3],
+[5,1,`Hãy chọn phương án đúng về đặc điểm của quy luật kinh tế:`,[`Phụ thuộc vào chính sách kinh tế của nhà nước qua các giai đoạn lịch sử khác nhau.`,`Mang tính chủ quan và phát huy tác dụng thông qua hoạt động kinh tế của con người và xã hội.`,`Vừa mang tính khách quan vừa mang tính chủ quan, đồng thời chỉ phát huy tối đa khi khoa học công nghệ phát triển.`,`Mang tính khách quan và phát huy tác dụng thông qua hoạt động kinh tế của con người.`],3],
+[6,1,`Để nghiên cứu kinh tế chính trị Mác – Lênin có thể sử dụng nhiều phương pháp, trong đó phương pháp nào là chủ yếu?`,[`Trừu tượng hóa khoa học`,`Mô hình hóa`,`Điều tra thống kê`,`Phân tích và tổng hợp`],0],
+[7,1,`Điền vào chỗ trống cụm từ thích hợp: Kinh tế chính trị Mác – Lênin là môn khoa học kinh tế cung cấp hệ thống tri thức lý luận về sự vận động của các quan hệ …………… trong sản xuất và trao đổi.`,[`Giữa con người với tự nhiên`,`Giữa tồn tại xã hội và ý thức xã hội`,`Giữa người với người`,`Giữa cơ sở hạ tầng với kiến trúc thượng tầng`],2],
+[8,1,`Điền vào chỗ trống cụm từ thích hợp: Đối với sinh viên nói riêng, kinh tế chính trị Mác – Lênin là cơ sở khoa học lý luận để ……… vai trò, trách nhiệm sáng tạo cao cả của mình.`,[`Nhận diện và định vị`,`Tìm hiểu và định hướng`,`Đánh giá`,`Tìm hiểu và đánh giá đúng`],0],
+[9,1,`Góp phần xây dựng thế giới quan cách mạng của giai cấp công nhân; tạo niềm tin vào thắng lợi trong cuộc đấu tranh xóa bỏ áp bức bóc lột; là vũ khí tư tưởng của giai cấp công nhân và nhân dân lao động trong công cuộc xây dựng CNXH là chức năng nào của kinh tế chính trị Mác – Lênin?`,[`Chức năng thực tiễn`,`Chức năng tư tưởng`,`Chức năng phương pháp luận`,`Chức năng nhận thức`],1],
+[10,1,`Học thuyết kinh tế nào của C.Mác được coi là cơ sở khoa học luận chứng cho vai trò lịch sử của phương thức sản xuất tư bản chủ nghĩa?`,[`Học thuyết tái sản xuất tư bản xã hội`,`Học thuyết giá trị thặng dư`,`Học thuyết giá trị lao động`,`Học thuyết tích lũy tư sản`],1],
+[11,1,`Thời kỳ nào được xem là hệ thống lý luận kinh tế chính trị đầu tiên nghiên cứu về nền sản xuất tư bản chủ nghĩa?`,[`Chủ nghĩa trọng thương`,`Kinh tế chính trị tư sản cổ điển`,`Chủ nghĩa trọng nông`,`CNXH không tưởng`],0],
+[12,1,`Đặc điểm của phương pháp trừu tượng hóa khoa học trong nghiên cứu kinh tế chính trị là:`,[`Nắm được ý nghĩa của đối tượng nghiên cứu`,`Nắm được hình thức của đối tượng nghiên cứu`,`Nắm được nội dung của đối tượng nghiên cứu`,`Nắm được bản chất của đối tượng nghiên cứu`],3],
+[13,1,`Theo quan điểm của V.I.Lênin, kinh tế chính trị không nghiên cứu sự sản xuất mà nghiên cứu:`,[`Quan hệ xã hội giữa người với người trong sản xuất`,`Quan hệ xã hội giữa người với người trong trao đổi`,`Quan hệ xã hội giữa người với người trong tiêu dùng`,`Quan hệ xã hội giữa người với người trong phân phối`],0],
+[14,1,`Chức năng thực tiễn của kinh tế chính trị Mác – Lênin đối với sinh viên là cơ sở khoa học lý luận để:`,[`Nhận thức được các quy luật và tính quy luật trong nền kinh tế.`,`Phát hiện bản chất của các hiện tượng và quá trình kinh tế.`,`Trang bị phương pháp để xem xét thế giới nói chung.`,`Nhận diện và định vị vai trò, trách nhiệm và sáng tạo.`],3],
+[15,1,`Chọn ý sai về chức năng nhận thức của kinh tế – chính trị:`,[`Cung cấp hệ thống tri thức mở về những quy luật chi phối sự phát triển của sản xuất và trao đổi gắn với phương thức sản xuất.`,`Trang bị phương pháp để xem xét thế giới nói chung.`,`Phát hiện bản chất của các hiện tượng và quá trình kinh tế.`,`Luận giải sự liên hệ tác động biện chứng giữa người với người trong sản xuất và trao đổi với lực lượng sản xuất và kiến trúc thượng tầng tương ứng.`],1],
+[16,1,`Chức năng phương pháp luận của kinh tế chính trị Mác – Lênin là:`,[`Nền tảng lý luận khoa học cho việc tiếp cận các khoa học kinh tế khác.`,`Phát hiện bản chất của các hiện tượng và quá trình kinh tế.`,`Cơ sở để nhận thức được các quy luật và tính quy luật trong kinh tế.`,`Trang bị phương pháp để xem xét thế giới nói chung.`],0],
+[17,1,`Điền từ thích hợp vào chỗ trống (…) để thành câu đúng: Kinh tế chính trị là một môn …………… có mục đích nghiên cứu là tìm ra các quy luật chi phối sự vận động của các hiện tượng và quá trình hoạt động kinh tế của con người tương ứng với những trình độ phát triển nhất định của xã hội.`,[`Khoa học kinh tế`,`Kinh tế vi mô`,`Kinh tế công cộng`,`Kinh tế vĩ mô`],0],
+[18,1,`Kinh tế chính trị Mác – Lênin góp phần tạo lập nền tảng tư tưởng cộng sản cho những người lao động tiến bộ là nội dung của chức năng nào?`,[`Chức năng tư tưởng`,`Chức năng nhận thức`,`Chức năng phương pháp luận`,`Chức năng thực tiễn`],0],
+[19,1,`"Những thời đại kinh tế khác nhau không phải ở chỗ chúng sản xuất ra cái gì, mà là ở chỗ chúng sản xuất bằng cách nào, với những tư liệu lao động nào". Câu nói trên là của ai?`,[`D. Ricardo`,`A. Smith`,`Ph. Ăngghen`,`C. Mác`],3],
+[20,1,`Ai là người đã đưa kinh tế chính trị chính thức trở thành môn học với các phạm trù, khái niệm chuyên ngành?`,[`A. Smith`,`D. Ricardo`,`W. Petty`,`A. Montchrétien`],0],
+[21,1,`Điểm nhấn khoa học về mặt xác định đối tượng nghiên cứu kinh tế chính trị của C.Mác là:`,[`Hệ thống các quan hệ xã hội của sản xuất và trao đổi.`,`Nghiên cứu các chế độ xã hội khác nhau.`,`Biểu hiện kỹ thuật của sản xuất và trao đổi.`,`Quá trình sản xuất và tái sản xuất của xã hội loài người.`],0],
+[22,1,`Các khâu của quá trình tái sản xuất bao gồm:`,[`Sản xuất, phân phối, trao đổi, tiêu dùng`,`Sản xuất, vận chuyển, xuất nhập khẩu, tiêu dùng`,`Sản xuất, phân phối, tiêu dùng`,`Sản xuất, tiêu dùng`],0],
+[23,1,`Chọn ý đúng trong các lựa chọn dưới đây:`,[`Kinh tế chính trị nghiên cứu lĩnh vực sản xuất và tái sản xuất.`,`Kinh tế chính trị nghiên cứu lĩnh vực lưu thông.`,`Kinh tế chính trị nghiên cứu quan hệ sản xuất và trao đổi.`,`Kinh tế chính trị nghiên cứu sản xuất và tiêu dùng.`],2],
+[24,1,`Mục đích nghiên cứu của kinh tế chính trị Mác – Lênin là:`,[`Đánh giá mối quan hệ giữa quan hệ sản xuất với kiến trúc thượng tầng.`,`Đánh giá nguồn gốc sự phát triển của các hình thái kinh tế – xã hội từ thấp đến cao.`,`Tìm ra quy luật kinh tế chi phối các quan hệ giữa người với người trong sản xuất và trao đổi.`,`Đánh giá mối quan hệ giữa lực lượng sản xuất và quan hệ sản xuất.`],2],
+[25,1,`Thời kỳ nào được xem là hệ thống lý luận kinh tế chính trị đầu tiên nghiên cứu về nền sản xuất tư bản chủ nghĩa:`,[`Chủ nghĩa trọng nông`,`CNXH không tưởng`,`Chủ nghĩa trọng thương`,`Kinh tế chính trị tư sản cổ điển`],2],
+[26,1,`Quan điểm xác định đối tượng nghiên cứu trong nền sản xuất là của trường phái nào?`,[`Kinh tế chính trị Mác – Lênin`,`Chủ nghĩa trọng nông`,`Kinh tế chính trị tư sản cổ điển Anh`,`Chủ nghĩa trọng thương`],2],
+[27,1,`Đối tượng nghiên cứu của kinh tế chính trị Mác – Lênin là:`,[`Quan hệ xã hội giữa người với người.`,`Các quan hệ xã hội của sản xuất và trao đổi trong mối quan hệ tác động qua lại với lực lượng sản xuất và kiến trúc thượng tầng tương ứng của phương thức sản xuất nhất định.`,`Quá trình sản xuất, phân phối, trao đổi, tiêu dùng và các quan hệ kinh tế giữa lực lượng sản xuất và kiến trúc thượng tầng.`,`Sản xuất của cải vật chất.`],1],
+[28,1,`Chọn ý đúng trong các phát biểu dưới đây:`,[`Quy luật kinh tế là khách quan, chính sách kinh tế là chủ quan.`,`Quy luật kinh tế và chính sách kinh tế đều mang tính khách quan.`,`Quy luật kinh tế là chủ quan, chính sách kinh tế là khách quan.`,`Cả quy luật kinh tế và chính sách kinh tế đều mang tính chủ quan.`],0],
+
+[29,2,`Điền vào dấu … cụm từ thích hợp: “Sản xuất hàng hóa là kiểu tổ chức kinh tế mà ở đó, những người sản xuất ra sản phẩm không nhằm mục đích phục vụ nhu cầu tiêu dùng của chính mình mà để ………………….”:`,[`Trao đổi, mua bán`,`Phục vụ nhu cầu xã hội`,`Thỏa mãn cả lợi ích cá nhân và xã hội`,`Thu lợi nhuận`],0],
+[30,2,`Đâu là điều kiện cần để sản xuất hàng hóa ra đời?`,[`Sự tách biệt về kinh tế`,`Phân công lao động xã hội`,`Sở hữu tư nhân`,`Chế độ tư hữu về tư liệu sản xuất`],1],
+[31,2,`Đâu là điều kiện đủ để sản xuất hàng hóa ra đời?`,[`Chế độ tư hữu về tư liệu sản xuất`,`Sở hữu tư nhân, tự do sản xuất kinh doanh và tự do cạnh tranh`,`Sự tách biệt tương đối về mặt kinh tế của các chủ thể sản xuất`,`Phân công lao động xã hội`],2],
+[32,2,`Sở dĩ hàng hóa có hai thuộc tính là do:`,[`Hàng hóa có công dụng và do lao động tạo ra.`,`Lao động của người sản xuất hàng hóa có tính chất hai mặt là lao động cụ thể và lao động trừu tượng.`,`Chi phí của lao động sống và lao động quá khứ kết tinh trong hàng hóa đó.`,`Quy luật kinh tế của sản xuất hàng hóa quy định.`],1],
+[33,2,`Khi năng suất lao động tăng:`,[`Hao phí lao động để tạo ra một đơn vị sản phẩm sẽ giảm một nửa.`,`Hao phí lao động để tạo ra một đơn vị sản phẩm sẽ tăng.`,`Hao phí lao động để tạo ra một đơn vị sản phẩm sẽ không đổi.`,`Hao phí lao động để tạo ra một đơn vị sản phẩm sẽ giảm.`],3],
+[34,2,`Tổng thể các mối quan hệ kinh tế gồm: cung, cầu, giá cả; quan hệ hàng hóa – tiền tệ; quan hệ giá trị, giá trị sử dụng; quan hệ hợp tác, cạnh tranh; quan hệ trong nước, quốc tế là thị trường theo nghĩa nào?`,[`Thị trường theo nghĩa hẹp`,`Thị trường theo nghĩa rộng`,`Thị trường tự do và thị trường cạnh tranh hoàn hảo`,`Thị trường tổng hợp`],1],
+[35,2,`Hệ thống các quan hệ kinh tế mang đặc tính tự điều chỉnh các cân đối của nền kinh tế theo yêu cầu của các quy luật kinh tế là:`,[`Vai trò của thị trường`,`Cơ chế thị trường`,`Nền kinh tế thị trường`,`Quy luật thị trường`],1],
+[36,2,`Nội dung (yêu cầu) của quy luật giá trị là:`,[`Giá cả hình thành tự phát trên thị trường do sự tác động của các quy luật kinh tế.`,`Giá cả bằng giá trị của hàng hóa.`,`Giá cả lên xuống xoay quanh giá trị.`,`Sản xuất, trao đổi tiến hành trên cơ sở hao phí lao động xã hội cần thiết.`],3],
+[37,2,`Sự tác động của cung và cầu làm cho:`,[`Giá cả vận động xoay quanh giá trị`,`Giá cả lớn hơn giá trị`,`Giá cả hàng hóa bằng giá trị của hàng hóa`,`Giá cả nhỏ hơn giá trị`],0],
+[38,2,`Biện pháp cạnh tranh giữa các ngành là:`,[`Nâng cao chất lượng dịch vụ.`,`Đổi mới công nghệ, nâng cao trình độ tay nghề của người lao động.`,`Đẩy mạnh các hoạt động quảng cáo, tiếp thị.`,`Tự do di chuyển nguồn lực của mình từ ngành này sang ngành khác.`],3],
+[39,2,`Những người quyết định đến sản lượng, chất lượng hàng hóa khi cung ứng trên thị trường là:`,[`Người tiêu dùng và doanh nghiệp`,`Người sản xuất và người tiêu dùng`,`Người sản xuất`,`Nhà nước và doanh nghiệp`],2],
+[40,2,`Mục đích của người sản xuất là:`,[`Thường xuyên ứng dụng công nghệ mới nhất để đạt được mục tiêu phát triển.`,`Đáp ứng nhu cầu tốt nhất cho xã hội.`,`Thực hiện tốt các mục tiêu kinh tế – xã hội của quốc gia.`,`Đạt lợi nhuận tối đa trong điều kiện nguồn lực có hạn.`],3],
+[41,2,`Người sản xuất phải cung cấp những hàng hóa, dịch vụ không làm tổn hại đến sức khỏe, lợi ích của con người là biểu hiện của:`,[`Trách nhiệm đối với con người của người sản xuất.`,`Trách nhiệm đối với sự phát triển bền vững kinh tế – xã hội của người sản xuất.`,`Tuân thủ pháp luật của người sản xuất.`,`Ý thức, trách nhiệm của mỗi con người.`],0],
+[42,2,`Vai trò của người tiêu dùng là:`,[`Kích thích người sản xuất năng động, sáng tạo.`,`Tạo điều kiện để phát triển bền vững xã hội.`,`Kích thích người sản xuất đầu tư, nghiên cứu, ứng dụng công nghệ cao vào sản xuất.`,`Định hướng sản xuất.`],3],
+[43,2,`Xét về vai trò kinh tế, nhà nước thực hiện chức năng:`,[`Quản lý nhà nước về kinh tế nhằm thực hiện những biện pháp để khắc phục những khuyết tật của thị trường.`,`Hoàn thiện hệ thống pháp luật về kinh tế.`,`Quản lý nhà nước về kinh tế và xã hội nhằm phát triển kinh tế nhanh, hiệu quả, đáp ứng nhu cầu ngày càng cao của xã hội.`,`Hoàn thiện các chính sách nhằm phát triển khoa học công nghệ.`],0],
+[44,2,`Giá trị của hàng hóa được quyết định bởi:`,[`Mức độ thỏa mãn nhu cầu cho con người.`,`Sự khan hiếm của hàng hóa.`,`Lao động trừu tượng của người sản xuất ra hàng hóa kết tinh trong hàng hóa ấy.`,`Sự hao phí sức lao động của con người trong quá trình sản xuất và lưu thông hàng hóa.`],2],
+[45,2,`Lượng giá trị xã hội của hàng hóa được quyết định bởi:`,[`Hao phí lao động sống của người sản xuất hàng hóa`,`Chi phí thời gian, công sức và các yếu tố khác`,`Thời gian lao động xã hội cần thiết`,`Hao phí lao động cần thiết của người sản xuất hàng hóa`],2],
+[46,2,`Lượng giá trị của đơn vị hàng hóa thay đổi:`,[`Tỷ lệ nghịch với cường độ lao động.`,`Tỷ lệ thuận với năng suất lao động, không phụ thuộc vào cường độ lao động.`,`Tỷ lệ nghịch với năng suất lao động, không phụ thuộc vào cường độ lao động.`,`Tỷ lệ thuận với năng suất lao động.`],2],
+[47,2,`Chọn ý đúng về tăng cường độ lao động: khi cường độ lao động tăng lên thì:`,[`Số lượng lao động hao phí trong thời gian đó không thay đổi, giá trị một sản phẩm tăng lên.`,`Số lượng hàng hóa làm ra trong một đơn vị thời gian tăng lên, giá trị một đơn vị hàng hóa giảm đi.`,`Số lượng hàng hóa làm ra trong một đơn vị thời gian tăng lên, giá trị một hàng hóa không thay đổi.`,`Số lượng hàng hóa làm ra trong một đơn vị thời gian không đổi, giá trị một hàng hóa không đổi.`],2],
+[48,2,`Chọn ý đúng về vai trò của lao động cụ thể:`,[`Nguồn gốc của của cải`,`Nguồn gốc của giá trị trao đổi`,`Nguồn gốc của giá trị`,`Nguồn gốc của giá trị thặng dư`],0],
+[49,2,`“Lao động là cha, còn đất là mẹ của mọi của cải”. Khái niệm lao động trong câu này là lao động gì?`,[`Lao động giản đơn`,`Lao động trừu tượng`,`Lao động cụ thể`,`Lao động phức tạp`],2],
+[50,2,`Chọn đáp án đúng trong các phương án sau đây:`,[`Lao động cụ thể tạo ra tính hữu ích của sản phẩm.`,`Lao động cụ thể được thực hiện trước lao động trừu tượng.`,`Lao động cụ thể tạo ra giá trị mới trong giá trị của hàng hóa.`,`Lao động trừu tượng chỉ có ở người có trình độ cao, còn người có trình độ thấp chỉ có lao động cụ thể.`],0],
+[51,2,`Điểm giống nhau giữa tăng năng suất lao động và tăng cường độ lao động là:`,[`Đều làm tăng lượng lao động hao phí trong một đơn vị sản phẩm.`,`Đều làm giá trị của một đơn vị hàng hóa giảm tương đối.`,`Đều làm giá trị của một đơn vị hàng hóa không thay đổi.`,`Đều làm số sản phẩm sản xuất ra trong một đơn vị thời gian tăng lên.`],3],
+[52,2,`Tiền tệ ra đời là do:`,[`Cung cầu trên thị trường thay đổi.`,`Yêu cầu của việc trao đổi hàng hóa và hội nhập kinh tế quốc tế.`,`Kết quả quá trình phát triển lâu dài của sản xuất và trao đổi hàng hóa.`,`Kết quả của việc khai thác vàng ngày càng khó khăn, đồng thời con người tìm ra nhiều tính năng đặc biệt của vàng.`],2],
+[53,2,`Khi đồng thời tăng năng suất lao động và cường độ lao động lên 2 lần thì ý nào dưới đây là đúng?`,[`Tổng số hàng hóa tăng lên 2 lần, giá trị 1 hàng hóa giảm 2 lần.`,`Tổng số hàng hóa tăng lên 4 lần, tổng số giá trị hàng hóa tăng lên 4 lần so với trước.`,`Tổng số giá trị hàng hóa tăng 2 lần, tổng số hàng hóa tăng 2 lần.`,`Giá trị 1 hàng hóa giảm 2 lần, tổng số giá trị hàng hóa tăng 2 lần.`],3],
+[54,2,`Tiền là hàng hóa đặc biệt, bởi vì:`,[`Bản thân tiền không có giá trị thực nhưng có thể làm chức năng tiền tệ thế giới.`,`Tiền không có giá trị thật.`,`Tiền cũng là hàng hóa nhưng có khả năng đo lường giá trị các hàng hóa khác.`,`Tiền có khả năng cất trữ.`],2],
+[55,2,`Tiền được dùng làm môi giới cho quá trình trao đổi hàng hóa là thực hiện chức năng nào:`,[`Phương tiện lưu thông`,`Thước đo giá trị`,`Tiền tệ thế giới`,`Phương tiện thanh toán`],0],
+[56,2,`Khi đồng nội tệ được định giá thấp sẽ:`,[`Hạn chế cả nhập khẩu và xuất khẩu`,`Hạn chế nhập khẩu, khuyến khích xuất khẩu`,`Khuyến khích nhập khẩu, hạn chế xuất khẩu`,`Khuyến khích cả nhập khẩu và xuất khẩu`],1],
+[57,2,`Chỉ ra câu sai trong các phát biểu sau đây:`,[`Lao động cụ thể và lao động trừu tượng là hai mặt gắn bó mật thiết với nhau, thống nhất chặt chẽ với nhau.`,`Mỗi lao động cụ thể có đối tượng, phương pháp, mục đích, công cụ riêng và kết quả riêng.`,`Lao động cụ thể tạo ra giá trị sử dụng, lao động trừu tượng tạo ra giá trị của hàng hóa.`,`Biểu hiện của lao động cụ thể là lao động tư nhân, biểu hiện của lao động trừu tượng là lao động xã hội.`],0],
+[58,2,`Trong cùng một đơn vị thời gian, sản xuất cùng một loại sản phẩm thì lao động giản đơn hay lao động phức tạp tạo ra lượng giá trị một hàng hóa thấp hơn?`,[`Lao động giản đơn`,`Lao động phức tạp`,`Không có loại hình lao động nào`,`Tùy thuộc vào điều kiện sản xuất`],0],
+[59,2,`Quy luật kinh tế cơ bản của sản xuất và trao đổi hàng hóa là:`,[`Quy luật giá trị`,`Quy luật lưu thông tiền tệ`,`Quy luật cạnh tranh`,`Quy luật cung – cầu`],0],
+[60,2,`Giá trị của hàng hóa là một phạm trù:`,[`Lịch sử`,`Tùy thuộc vào từng loại hàng hóa`,`Không liên quan đến phạm trù`,`Vĩnh viễn`],0],
+[61,2,`Giá trị thị trường của từng loại hàng hóa được hình thành do:`,[`Cạnh tranh giữa các ngành`,`Do sự tác động của cung cầu, cạnh tranh`,`Cạnh tranh trong nội bộ ngành`,`Do sự tác động của thị trường`],2],
+[62,2,`Giá trị của hàng hóa được biểu hiện ra bên ngoài thành:`,[`Giá trị cá biệt`,`Giá trị sử dụng`,`Giá trị xã hội`,`Giá trị trao đổi`],3],
+[63,2,`Chỉ ra câu sai trong các phát biểu dưới đây:`,[`Quyền sử dụng đất có giá trị sử dụng và có giá trị như các hàng hóa khác.`,`Chứng khoán, chứng quyền và một số giấy tờ có giá là tư bản giả.`,`Thương hiệu có giá trị sử dụng và có giá trị.`,`Quyền sử dụng đất có giá trị sử dụng nhưng không có giá trị.`],0],
+[64,2,`Về mặt cấu thành, lượng giá trị của một đơn vị hàng hóa được sản xuất ra bao hàm:`,[`Hao phí lao động quá khứ và giá trị sức lao động.`,`Giá trị thặng dư và tiền công công nhân.`,`Hao phí lao động quá khứ và hao phí lao động mới kết tinh thêm.`,`Hao phí lao động quá khứ và giá trị tư liệu sản xuất, tiền công cho công nhân.`],2],
+
+[65,3,`Chọn câu sai cho cách diễn đạt nào dưới đây về hệ quả kinh tế của tích lũy tư bản?`,[`Tích lũy tư bản là quá trình hiện đại hóa công nghệ.`,`Tích lũy tư bản làm tăng cấu tạo hữu cơ của tư bản.`,`Tích lũy tư bản làm tăng tích tụ và tập trung tư bản.`,`Tích lũy tư bản làm bần cùng hóa giai cấp công nhân.`],0],
+[66,3,`Địa tô TBCN là phần còn lại sau khi khấu trừ:`,[`Lợi nhuận`,`Lợi nhuận siêu ngạch`,`Lợi nhuận bình quân`,`Lợi nhuận độc quyền`],2],
+[67,3,`Dựa vào căn cứ nào để chia tư bản thành tư bản bất biến và tư bản khả biến?`,[`Phương thức chuyển giá trị các bộ phận tư bản vào sản phẩm.`,`Hao mòn hữu hình hoặc vô hình.`,`Tốc độ chu chuyển của tư bản.`,`Vai trò của các bộ phận tư bản trong quá trình sản xuất giá trị thặng dư.`],3],
+[68,3,`Trong quá trình tái sản xuất tư bản chủ nghĩa, quy mô của tư bản cá biệt tăng lên thông qua:`,[`Tích tụ và tập trung tư bản`,`Quá trình liên kết, hợp tác quốc tế`,`Chính sách phát triển kinh tế – xã hội của chính phủ`,`Thu hút đầu tư nước ngoài`],0],
+[69,3,`Sức lao động là một loại hàng hóa đặc biệt vì:`,[`Sức lao động là chìa khóa để giải quyết mâu thuẫn trong công thức chung tư bản.`,`Nó bao gồm toàn bộ giá trị tư liệu sinh hoạt để nuôi sống người lao động, con cái và phí tổn đào tạo.`,`Sức lao động là hàng hóa gắn với con người cụ thể, có nhân cách.`,`Nó mang yếu tố tinh thần và lịch sử; giá trị sử dụng của hàng hóa sức lao động khi sử dụng tạo ra lượng giá trị mới lớn hơn giá trị bản thân nó.`],3],
+[70,3,`Động cơ quan trọng nhất của hoạt động cạnh tranh tư bản chủ nghĩa là:`,[`Tỷ suất lợi tức`,`Tỷ suất lợi nhuận bình quân`,`Tỷ suất lợi nhuận`,`Tỷ suất giá trị thặng dư`],2],
+[71,3,`Trong nền kinh tế thị trường TBCN, tư bản thương nghiệp ra đời do:`,[`Sự phân công lao động xã hội`,`Tư bản hàng hóa`,`Tư bản cho vay và tư bản ngân hàng`,`Tư bản lưu động`],0],
+[72,3,`Trong mô hình tái sản xuất giản đơn, toàn bộ giá trị thặng dư được nhà tư bản:`,[`Đầu tư vào quá trình sản xuất`,`Tiêu dùng cho ứng dụng khoa học công nghệ`,`Tiêu dùng cho cá nhân`,`Trả tiền công cho công nhân`],2],
+[73,3,`Nếu nhà tư bản bán hàng hóa ra thị trường với giá cả bằng với giá trị thì họ có thu được lợi nhuận không? Vì sao?`,[`Có. Vì lợi nhuận bằng giá trị thặng dư.`,`Không. Vì mới chỉ đủ bù đắp cho chi phí sản xuất.`,`Có. Vì thu được lợi nhuận siêu ngạch.`,`Không. Vì giá cả bằng chi phí sản xuất.`],0],
+[74,3,`Cấu tạo hữu cơ luôn có xu hướng tăng là do:`,[`Thu hút đầu tư nước ngoài.`,`Mối quan hệ giữa tư bản bất biến và tư bản khả biến ngày càng giảm tương đối.`,`Xu hướng đầu tư ứng dụng công nghệ cao.`,`Cấu tạo kỹ thuật cũng vận động theo xu hướng tăng lên về lượng.`],3],
+[75,3,`Giá trị sử dụng của hàng hóa sức lao động trong quá trình sử dụng vào sản xuất có khả năng tạo ra một lượng giá trị mới lớn hơn giá trị bản thân nó. Hỏi: “giá trị bản thân nó” là gì?`,[`Giá trị vốn có của nó`,`Giá trị sử dụng của hàng hóa sức lao động`,`Giá trị hàng hóa sức lao động`,`Giá trị hàng hóa`],2],
+[76,3,`Chỉ ra câu sai trong các phát biểu dưới đây về vai trò của chi phí sản xuất:`,[`Là căn cứ để xác định lợi nhuận của nhà sản xuất.`,`Bù đắp tư bản về giá trị và hiện vật.`,`Đảm bảo điều kiện cho tái sản xuất trong nền kinh tế thị trường.`,`Là cơ sở cho cạnh tranh về giá cả bán hàng giữa các nhà tư bản.`],0],
+[77,3,`Nguồn gốc duy nhất của tích lũy tư bản là:`,[`Tài kinh doanh của nhà tư bản`,`Do cải tiến kỹ thuật`,`Tư bản có sẵn trong xã hội`,`Giá trị thặng dư`],3],
+[78,3,`Mâu thuẫn trong công thức chung của tư bản chỉ được giải quyết khi:`,[`Tìm ra được lao động phức tạp`,`Tìm ra được hàng hóa sức lao động`,`Ứng dụng khoa học kỹ thuật hiện đại vào sản xuất`,`Tìm ra được tính chất hai mặt của lao động sản xuất hàng hóa`],1],
+[79,3,`T – H – T’ được gọi là công thức chung của tư bản vì:`,[`Các hình thái tư bản đều vận động theo công thức này.`,`Nó đại diện cho mọi hoạt động của các chủ thể kinh tế trong sản xuất và lưu thông.`,`Nó thể hiện mục tiêu giống nhau của mọi chủ thể kinh tế và mọi quốc gia.`,`Cả b và c đúng.`],0],
+[80,3,`Giá trị thặng dư siêu ngạch thu được do:`,[`Tăng năng suất lao động xã hội`,`Tăng năng suất lao động cá biệt`,`Tăng năng suất lao động của liên ngành`,`Tăng năng suất lao động ngành`],1],
+[81,3,`Nếu tỷ lệ giữa tích lũy và tiêu dùng đã được xác định thì quy mô của tích lũy tư bản phụ thuộc vào yếu tố nào?`,[`Tích tụ và tập trung tư bản`,`Tâm lý chủ quan của nhà tư bản`,`Giá trị thặng dư`,`Cải tiến khoa học kỹ thuật hiện đại vào sản xuất`],2],
+[82,3,`Chọn câu sai trong các phát biểu dưới đây về lợi nhuận:`,[`Lợi nhuận và giá trị thặng dư hoàn toàn giống nhau.`,`Lợi nhuận là mục tiêu, động cơ, động lực của hoạt động sản xuất, kinh doanh.`,`Lợi nhuận chẳng qua chỉ là hình thái biểu hiện của giá trị thặng dư trên bề mặt nền kinh tế thị trường.`,`Nhà tư bản chỉ cần bán hàng hóa cao hơn chi phí sản xuất là đã có lợi nhuận.`],0],
+[83,3,`Việc phân chia tư bản thành bất biến và khả biến có ý nghĩa:`,[`Xác định thời gian chu chuyển của từng loại tư bản`,`Thu hồi giá trị của từng bộ phận tư bản`,`Xác định bộ phận nào tạo ra giá trị thặng dư`,`Tất cả đều đúng`],2],
+[84,3,`Điều kiện để hình thành tỷ suất lợi nhuận bình quân, lợi nhuận bình quân và giá cả sản xuất là:`,[`Độc quyền tư nhân phát triển mạnh`,`Nhà tư bản lựa chọn được phương án kinh doanh tối ưu nhất`,`Cạnh tranh trở nên hoàn hảo hơn`,`Tự do di chuyển tư bản và sức lao động`],3],
+[85,3,`Tốc độ chu chuyển tư bản tăng thì tỷ suất lợi nhuận sẽ:`,[`Tùy điều kiện cụ thể`,`Tăng lên`,`Giảm`,`Không đổi`],1],
+[86,3,`Hãy chỉ ra câu sai trong các phát biểu sau:`,[`Xét trên phạm vi xã hội, lưu thông không tạo ra giá trị thặng dư.`,`Mục đích vận động của công thức T – H – T’ là giá trị, hơn nữa là giá trị thặng dư.`,`Phân tích công thức chung của tư bản T – H – T’ là biểu hiện của mua rẻ, bán đắt.`,`Giá trị thặng dư chỉ được tạo ra trong quá trình sản xuất.`],2],
+[87,3,`Tái sản xuất mở rộng theo chiều sâu tăng sản phẩm đầu ra nhờ:`,[`Tăng hiệu quả các yếu tố đầu vào`,`Tăng số lượng máy móc, thiết bị`,`Tăng số lượng các yếu tố đầu vào`,`Tất cả các yếu tố trên đều sai`],0],
+[88,3,`Bản chất của tích lũy tư bản là:`,[`Quá trình khai thác các tiềm năng, lợi thế và thu hút vốn đầu tư nước ngoài nhằm thu lợi nhuận siêu ngạch.`,`Quá trình tái sản xuất mở rộng tư bản chủ nghĩa thông qua việc biến giá trị thặng dư thành tư bản phụ thêm.`,`Quá trình huy động các nguồn vốn để mở rộng sản xuất.`,`Quá trình xâm lược, vơ vét, bóc lột thuộc địa và công nhân chính quốc.`],1],
+[89,3,`Đòn bẩy mạnh nhất để thúc đẩy tập trung tư bản là:`,[`Độ mở cửa của nền kinh tế`,`Khủng hoảng kinh tế`,`Cạnh tranh và tín dụng`,`Quá trình liên kết, hợp tác quốc tế`],2],
+[90,3,`Chọn phương án sai cho các phát biểu dưới đây:`,[`Tỷ suất giá trị thặng dư và tỷ suất lợi nhuận tỷ lệ thuận với nhau.`,`Tốc độ chu chuyển tư bản tỷ lệ thuận với tỷ suất giá trị thặng dư.`,`Tiết kiệm tư bản bất biến luôn làm tăng tỷ suất lợi nhuận.`,`Cấu tạo hữu cơ của tư bản tỷ lệ nghịch với tỷ suất lợi nhuận.`],1],
+[91,3,`Lợi tức là một phần của:`,[`Lợi nhuận`,`Lợi nhuận bình quân`,`Lợi nhuận ngân hàng`,`Lợi nhuận siêu ngạch`],1],
+[92,3,`Chọn câu sai cho phát biểu dưới đây về bần cùng hóa giai cấp công nhân:`,[`Bần cùng hóa tương đối là phần phân phối cho giai cấp công nhân có tăng tuyệt đối nhưng lại giảm tương đối so với phần dành cho giai cấp tư sản.`,`Bần cùng hóa tuyệt đối thể hiện sự sụt giảm tuyệt đối về mức sống của giai cấp công nhân làm thuê.`,`Bần cùng hóa tuyệt đối chỉ xuất hiện đối với bộ phận giai cấp công nhân làm thuê đang thất nghiệp.`,`Bần cùng hóa tuyệt đối xuất hiện đối với bộ phận giai cấp công nhân đang thất nghiệp và toàn bộ GCCN làm thuê trong điều kiện khủng hoảng kinh tế.`],2],
+[93,3,`Với một khối lượng giá trị thặng dư nhất định, quy mô tích lũy tư bản phụ thuộc vào yếu tố nào?`,[`Tỷ lệ phân chia giữa tích lũy và tiêu dùng`,`Năng suất lao động xã hội`,`Hiệu suất của máy móc thiết bị`,`Trình độ khai thác sức lao động và khả năng ứng dụng công nghệ`],0],
+[94,3,`Dựa vào căn cứ nào để chia tư bản thành tư bản bất biến và tư bản khả biến?`,[`Phương thức chuyển giá trị của các bộ phận tư bản vào sản phẩm`,`Vai trò của các bộ phận tư bản trong quá trình sản xuất giá trị thặng dư`,`Hao mòn hữu hình hoặc vô hình`,`Tốc độ chu chuyển của tư bản`],1],
+[95,3,`Học thuyết nào của C.Mác được xem là hòn đá tảng:`,[`Học thuyết giá trị thặng dư`,`Học thuyết về tích lũy tư bản`,`Học thuyết về hình thái kinh tế – xã hội`,`Học thuyết giá trị lao động`],0],
+
+[96,4,`Giá cả độc quyền là giá cả do các tổ chức độc quyền áp đặt trong:`,[`Bán hàng hóa độc quyền`,`Bán hàng hóa ra thị trường`,`Mua các yếu tố đầu vào`,`Mua và bán hàng hóa`],3],
+[97,4,`Liên kết ngang giữa các tổ chức độc quyền là:`,[`Liên kết mở rộng ra nhiều ngành khác nhau`,`Liên kết trong phạm vi quốc gia`,`Liên kết giữa những doanh nghiệp trong cùng một ngành`,`Liên kết trên phạm vi quốc tế thông qua bàn tay của nhà nước tư sản`],2],
+[98,4,`Đặc điểm mới của tích tụ và tập trung tư bản là:`,[`Sự phát triển của độc quyền tư nhân và độc quyền nhà nước.`,`Sự xuất hiện các công ty độc quyền xuyên quốc gia bên cạnh sự phát triển của các xí nghiệp vừa và nhỏ.`,`Sự xuất hiện độc quyền ở các nước đang phát triển.`,`Sự hình thành và phát triển của các hình thức độc quyền mới.`],1],
+[99,4,`Chủ thể xuất khẩu tư bản của chủ nghĩa tư bản ngày nay chủ yếu là:`,[`Các nhà tư bản tư nhân`,`Các công ty xuyên quốc gia`,`Các tổ chức độc quyền tư nhân trong nước`,`Nhà nước tư sản`],1],
+[100,4,`Chọn phương án sai cho các phát biểu sau đây về sự kết hợp nhân sự trong CNTB độc quyền nhà nước:`,[`Sự kết hợp về nhân sự giữa tổ chức độc quyền và nhà nước được thực hiện thông qua các đảng phái.`,`Các Hội chủ hoạt động thông qua các đảng phái để bảo vệ lợi ích cho người lao động.`,`Đứng đằng sau các đảng phái là các Hội chủ xí nghiệp độc quyền.`,`Các Hội chủ cung cấp kinh phí cho các đảng, quyết định về mặt nhân sự và đường lối chính trị, kinh tế.`],1],
+[101,4,`Các xí nghiệp tư bản tham gia vào Trust trở thành:`,[`Những công ty độc lập trong hệ thống quản trị chung`,`Những cổ đông để thu lợi nhuận theo số lượng cổ phần`,`Những chi nhánh trong tổng công ty`,`Những tập đoàn kinh tế hùng mạnh`],1],
+[102,4,`Sự phát triển của hệ thống tín dụng đã:`,[`Trở thành đòn bẩy mạnh mẽ thúc đẩy tập trung sản xuất, dẫn đến độc quyền.`,`Đẩy nhanh quá trình tích lũy tư bản.`,`Đẩy nhanh quá trình tích tụ tư bản.`,`Tạo điều kiện để các xí nghiệp huy động vốn, mở rộng sản xuất, hình thành độc quyền.`],0],
+[103,4,`Trong nền kinh tế thị trường TBCN, độc quyền nhà nước được hình thành do:`,[`Trên cơ sở cộng sinh giữa độc quyền tư nhân, độc quyền nhóm và sức mạnh kinh tế của nhà nước.`,`Sự thống trị của các tập đoàn kinh tế xuyên quốc gia, đa quốc gia.`,`Do sự thống trị và chi phối của tư bản tài chính và tài phiệt tài chính.`,`Sự kết hợp giữa độc quyền tư nhân và nhà nước tư sản nhằm đảm bảo lợi ích cho giai cấp tư sản.`],0],
+[104,4,`Biểu hiện mới về hình thức của tư bản tài chính là:`,[`Chế độ tham dự được kết hợp thêm với chế độ ủy nhiệm.`,`Một tổ hợp đa dạng kiểu: công – nông – thương – tín – dịch vụ – quốc phòng.`,`Cổ phần được phát hành rộng rãi hơn.`,`Đa dạng hơn, tinh vi hơn, phức tạp hơn.`],1],
+[105,4,`Consortium là hình thức độc quyền theo kiểu:`,[`Liên kết chiều ngang`,`Liên kết phân tầng`,`Liên kết công – tư`,`Liên kết chiều dọc`],3],
+[106,4,`Concern và Conglomerate là hình thức độc quyền theo kiểu:`,[`Liên kết chiều ngang`,`Liên kết đa chiều, công – tư kết hợp`,`Liên kết chiều dọc theo từng ngành nghề cả trong nước và quốc tế`,`Liên kết cả ở chiều dọc và chiều ngang, cả ở trong nước và nước ngoài`],3],
+[107,4,`Chọn phương án sai cho các phát biểu sau đây về những biểu hiện mới của xuất khẩu tư bản:`,[`Hình thức xuất khẩu tư bản chủ yếu tập trung vào những ngành công nghệ cao.`,`Chủ thể xuất khẩu tư bản có sự thay đổi lớn.`,`Nguyên tắc cùng có lợi trong đầu tư được đề cao.`,`Đại bộ phận dòng đầu tư chảy qua lại giữa các nước tư bản phát triển với nhau.`],0],
+[108,4,`Chọn phương án sai cho các phát biểu dưới đây về vai trò của chủ nghĩa tư bản:`,[`Thúc đẩy lực lượng sản xuất phát triển nhanh chóng.`,`Thực hiện xã hội hóa sản xuất.`,`Chuyển nền sản xuất nhỏ thành nền sản xuất lớn hiện đại.`,`Đảm bảo sự phát triển dân chủ cho con người.`],3],
+[109,4,`Độc quyền xuất hiện đã làm cho cạnh tranh:`,[`Các phương án trên đều sai`,`Gay gắt hơn`,`Giảm đi`,`Bị thủ tiêu`],1],
+[110,4,`Vai trò của tổ chức độc quyền trong ngân hàng là:`,[`Thâm nhập vào độc quyền công nghiệp để quản lý việc sử dụng tiền vay và các nhà tư bản đi vay.`,`Trung gian trong việc thanh toán và tín dụng.`,`Nắm được hầu hết lượng tiền của xã hội, khống chế mọi hoạt động của nền kinh tế.`,`Môi giới nhận gửi, cho vay và kinh doanh tiền tệ.`],2],
+[111,4,`Chọn phương án sai cho các phát biểu sau đây:`,[`Độc quyền có thể kìm hãm sự tiến bộ kỹ thuật.`,`Độc quyền có thể làm tăng năng suất lao động.`,`Độc quyền tạo khả năng to lớn thúc đẩy sự tiến bộ kỹ thuật.`,`Độc quyền tạo ra sự lựa chọn tự nhiên và phân hóa giàu nghèo trong xã hội.`],3],
+[112,4,`Các tài phiệt tài chính thực hiện sự thống trị của mình thông qua:`,[`Chế độ tham dự`,`Thành lập công ty xuyên quốc gia`,`Làm chủ các tập đoàn kinh tế lớn`,`Quyền lực kinh tế và chính trị`],0],
+[113,4,`Mục đích của hình thức độc quyền Syndicate là:`,[`Để các xí nghiệp lớn thống nhất quy trình sản xuất.`,`Để các xí nghiệp tư bản lớn thỏa thuận với nhau về giá cả, sản lượng, thị trường.`,`Để các xí nghiệp lớn mở rộng thị trường ra toàn thế giới.`,`Để các xí nghiệp lớn thống nhất đầu mối mua và bán theo giá cả độc quyền.`],3],
+[114,4,`Giá cả độc quyền bao gồm các yếu tố:`,[`Chi phí sản xuất tư bản chủ nghĩa và lợi nhuận độc quyền`,`Chi phí sản xuất và lợi nhuận bình quân`,`Chi phí sản xuất độc quyền và lợi nhuận độc quyền`,`Chi phí sản xuất độc quyền và sự thỏa hiệp trong nội bộ tổ chức độc quyền`],0],
+[115,4,`Sự thống trị của độc quyền đã làm cho:`,[`Người tiêu dùng và xã hội bị thiệt hại.`,`Các tập đoàn kinh tế xuyên quốc gia, đa quốc gia hình thành và phát triển mạnh mẽ.`,`Các tập đoàn kinh tế phát triển mạnh, là cơ sở để phát triển kinh tế – xã hội.`,`Quá trình cạnh tranh và thu hút đầu tư nước ngoài tăng lên.`],0],
+[116,4,`Trong cơ cấu của độc quyền nhà nước của CNTB, nhà nước đã trở thành:`,[`Một tập thể tư bản khổng lồ.`,`Một chủ thể kinh tế có tiềm lực mạnh.`,`Một bộ máy quyền lực nằm trong tay các tài phiệt tài chính.`,`Một ông chủ vừa nắm trong tay quyền lực cả về kinh tế lẫn chính trị.`],0],
+[117,4,`Chọn phương án đúng để điền vào dấu …: “Độc quyền là sự liên minh giữa các doanh nghiệp lớn, …………… việc sản xuất và tiêu thụ một số loại hàng hóa, có khả năng định ra …………, nhằm thu lợi nhuận độc quyền cao”.`,[`Có khả năng thâu tóm / giá cả độc quyền`,`Đủ sức mạnh / giá cả độc quyền`,`Liên minh, liên kết / giá cả độc quyền`,`Nắm trong tay phần lớn / giá cả`],0],
+[118,4,`Xuất khẩu tư bản là:`,[`Xuất khẩu khoa học công nghệ`,`Xuất khẩu hàng hóa`,`Xuất khẩu lao động`,`Đầu tư vốn ra nước ngoài`],3],
+[119,4,`Chọn phương án sai cho các phát biểu dưới đây về hạn chế của chủ nghĩa tư bản:`,[`Sự phân hóa giàu nghèo trong lòng các nước tư bản có xu hướng ngày càng sâu sắc.`,`CNTB vẫn đã và đang tiếp tục tham gia gây ra chiến tranh và xung đột nhiều nơi trên thế giới.`,`Mục đích của nền sản xuất TBCN vẫn tập trung chủ yếu vì lợi ích của thiểu số giai cấp tư sản.`,`CNTB là thủ phạm chính của tình trạng cạn kiệt tài nguyên, ô nhiễm môi trường.`],3],
+[120,4,`Chủ nghĩa tư bản càng phát triển thì:`,[`Mâu thuẫn cơ bản của chủ nghĩa tư bản ngày càng gay gắt.`,`Mâu thuẫn trong xã hội tư bản sẽ được chuyển hóa dần.`,`Những mâu thuẫn sẽ được giải quyết.`,`Những mâu thuẫn cơ bản vẫn còn tồn tại.`],0],
+[121,4,`Biểu hiện mới trong cơ chế quan hệ nhân sự của độc quyền nhà nước dưới chủ nghĩa tư bản là:`,[`Một số quốc gia, trọng tâm quyền lực bắt đầu dịch chuyển về những tài phiệt tài chính.`,`Ngày càng xuất hiện nhiều thế lực độc tôn trong quản lý xã hội.`,`Vai trò, vị trí của các Đảng cầm quyền trong CNTB ngày càng lớn mạnh.`,`Thể chế đa nguyên trong phân chia quyền lực nhà nước trở thành phổ biến.`],3],
+[122,4,`Chọn phương án sai cho các phát biểu sau đây về biểu hiện mới trong vai trò công cụ điều tiết kinh tế của độc quyền nhà nước:`,[`Hình thức đa nguyên tư sản được sử dụng để thực hiện mục tiêu kép của tầng lớp tư sản độc quyền.`,`Viện trợ cho nước ngoài của Chính phủ trở thành một bộ phận của điều tiết kinh tế trong nước.`,`Sự tham dự của nhiều lực lượng trong bộ máy nhà nước đã tạo nên những nét mới của độc quyền nhà nước trong điều kiện mới.`,`Về chính trị, các Chính phủ, nghị viện tư sản hiện đại cũng được tổ chức như một công ty cổ phần tư bản chủ nghĩa.`],2],
+[123,4,`Liên kết dọc giữa các tổ chức độc quyền là:`,[`Liên kết mở rộng ra nhiều ngành khác nhau.`,`Liên kết giữa những doanh nghiệp trong cùng một ngành.`,`Liên kết trong phạm vi quốc gia.`,`Liên kết trên phạm vi quốc tế.`],0],
+[124,4,`Chọn phương án sai cho các phát biểu sau đây về sở hữu nhà nước trong CNTB độc quyền nhà nước:`,[`Mở rộng sản xuất TBCN, đảm bảo địa bàn rộng lớn cho sự phát triển của độc quyền.`,`Tạo điều kiện thuận lợi nhất cho việc di chuyển tư bản của các tổ chức độc quyền đầu tư vào các ngành sản xuất kinh doanh khác nhau.`,`Tạo điều kiện thuận lợi nhất cho phát triển kinh tế – xã hội của CNTB.`,`Làm chỗ dựa cho sự điều tiết kinh tế của nhà nước theo những chương trình nhất định.`],2],
+
+[125,5,`Cơ sở của sự thống nhất giữa lợi ích của các cá nhân, tạo ra sự thống nhất trong hoạt động của các chủ thể khác nhau trong xã hội là:`,[`Lợi ích cá nhân`,`Lợi ích tập thể`,`Lợi ích xã hội`,`Lợi ích của doanh nghiệp`],0],
+[126,5,`Chọn phương án sai cho các phát biểu dưới đây về thể chế kinh tế thị trường định hướng xã hội chủ nghĩa Việt Nam:`,[`Chưa đầy đủ.`,`Chưa đồng bộ.`,`Còn kém hiệu lực, hiệu quả, kém đầy đủ các yếu tố thị trường và các loại thị trường.`,`Còn kém hiệu lực, hiệu quả, thiếu nhiều loại thị trường.`],3],
+[127,5,`Trong các hình thức phân phối sản phẩm làm ra, hình thức phân phối nào là cơ bản nhất của nền kinh tế thị trường định hướng xã hội chủ nghĩa Việt Nam?`,[`Theo phúc lợi xã hội`,`Theo hiệu quả kinh tế`,`Theo lao động`,`Theo mức đóng góp vốn cùng các nguồn lực khác`],2],
+[128,5,`Yếu tố quan trọng đảm bảo tính định hướng xã hội chủ nghĩa của nền kinh tế thị trường Việt Nam là:`,[`Sự quản lý của nhà nước và quá trình hoàn thiện thể chế`,`Sự lãnh đạo của Đảng Cộng sản Việt Nam`,`Sự đa dạng của các chủ thể kinh tế`,`Sự tồn tại nhiều thành phần kinh tế`],1],
+[129,5,`Cùng với kinh tế tập thể, kinh tế nhà nước ngày càng khẳng định vị trí như thế nào trong nền kinh tế thị trường định hướng xã hội chủ nghĩa Việt Nam?`,[`Là một động lực quan trọng`,`Tạo cơ sở vững chắc cho các thành phần kinh tế khác`,`Quyết định nền kinh tế`,`Nền tảng vững chắc của nền kinh tế quốc dân`],3],
+[130,5,`Quan hệ lợi ích kinh tế giữa các chủ thể là:`,[`Vừa thống nhất vừa mâu thuẫn với nhau`,`Hoàn toàn mâu thuẫn với nhau, tìm cách bài trừ nhau`,`Thống nhất chặt chẽ với nhau, thúc đẩy nhau phát triển`,`Có quan hệ biện chứng trong đó lợi ích xã hội là nền tảng`],0],
+[131,5,`Mối quan hệ giữa tăng trưởng kinh tế với tiến bộ và công bằng xã hội là:`,[`Quan tâm đến mục tiêu tiến bộ và công bằng xã hội để phát triển kinh tế.`,`Thực hiện song song chính sách phát triển kinh tế với tiến bộ và công bằng xã hội.`,`Chăm lo phát triển kinh tế để thực hiện mục tiêu tiến bộ và công bằng xã hội.`,`Phát triển kinh tế là mục tiêu trước mắt, tiến bộ và công bằng xã hội là mục tiêu lâu dài.`],1],
+[132,5,`Phân phối căn cứ vào đóng góp trong việc tạo ra thu nhập là hình thức phân phối theo:`,[`Quy mô`,`Chất lượng`,`Chức năng`,`Trình độ`],2],
+[133,5,`Tại sao trong nền kinh tế thị trường, mọi quốc gia đều phải can thiệp vào?`,[`Nhà nước quản lý để thực hiện lợi ích cho giai cấp thống trị.`,`Bởi vì mỗi nước đều muốn thực hiện mục tiêu riêng của mình.`,`Bởi vì kinh tế thị trường có rất nhiều khuyết tật.`,`Bởi vì mỗi quốc gia có thể chế chính trị khác nhau.`],2],
+[134,5,`Chọn ý đúng về các nhân tố ảnh hưởng đến quan hệ lợi ích kinh tế:`,[`Trình độ phát triển của LLSX, địa vị của chủ thể trong QHSX, hội nhập kinh tế quốc tế và sự phát triển kinh tế – xã hội của đất nước.`,`Trình độ phát triển của LLSX, địa vị của chủ thể trong QHSX, chính sách phân phối thu nhập của nhà nước, hội nhập kinh tế quốc tế.`,`Trình độ phát triển của LLSX, địa vị của chủ thể trong QHSX, chính sách phân phối thu nhập của nhà nước.`,`Trình độ phát triển của LLSX, chính sách phân phối thu nhập của nhà nước, hội nhập kinh tế quốc tế.`],1],
+[135,5,`Mối quan hệ giữa lợi ích kinh tế và các lợi ích khác thể hiện như thế nào?`,[`Lợi ích kinh tế là cơ sở thúc đẩy sự phát triển các lợi ích khác.`,`Lợi ích kinh tế phụ thuộc vào lợi ích chính trị.`,`Lợi ích văn hóa – xã hội chi phối lợi ích kinh tế.`,`Lợi ích của xã hội là trên hết, trước hết.`],0],
+[136,5,`Trong nền kinh tế thị trường, phương thức và mức độ thỏa mãn các nhu cầu vật chất tùy thuộc vào:`,[`Thu nhập`,`Chất lượng, chủng loại hàng hóa và dịch vụ`,`Sự đa dạng của hàng hóa và dịch vụ`,`Mức chi tiêu`],0],
+[137,5,`Các quan hệ lợi ích kinh tế thống nhất với nhau vì:`,[`Một chủ thể có thể trở thành bộ phận cấu thành của chủ thể khác.`,`Tại một thời điểm kết quả hoạt động sản xuất, kinh doanh là xác định.`,`Lợi ích kinh tế hoàn toàn phụ thuộc vào trình độ lực lượng sản xuất.`,`Lợi ích kinh tế bị chi phối bởi quan hệ sở hữu.`],0],
+[138,5,`Kinh tế nhà nước và doanh nghiệp nhà nước là hai khái niệm:`,[`Kinh tế nhà nước là một bộ phận của doanh nghiệp nhà nước.`,`Đồng nhất với nhau.`,`Không liên hệ gì với nhau.`,`Doanh nghiệp nhà nước là một bộ phận của kinh tế nhà nước.`],3],
+[139,5,`Để phát triển thành công kinh tế thị trường định hướng xã hội chủ nghĩa ở Việt Nam, chúng ta cần:`,[`Nâng cao năng lực cạnh tranh quốc gia.`,`Thực hiện nâng cao năng lực lãnh đạo của Đảng, vai trò của nhà nước và phát huy vai trò làm chủ của nhân dân trong hoàn thiện thể chế kinh tế thị trường định hướng XHCN.`,`Phát triển nhanh các tập đoàn kinh tế tư nhân.`,`Phát huy được sức mạnh về trí tuệ của toàn dân tộc.`],1],
+[140,5,`Phân phối không chỉ phụ thuộc vào quan hệ sở hữu, mà còn phụ thuộc vào:`,[`Sản xuất`,`Tiêu dùng`,`Nhu cầu`,`Trao đổi`],0],
+[141,5,`“Hệ thống thể chế còn kém hiệu lực, hiệu quả, kém đầy đủ các yếu tố thị trường và các loại thị trường” là đánh giá được rút ra từ Nghị quyết nào của Đảng ta?`,[`Nghị quyết số 13-NQ/TW ngày 03/6/2017`,`Nghị quyết số 11-NQ/TW ngày 03/6/2017`,`Nghị quyết số 14-NQ/TW ngày 03/6/2017`,`Nghị quyết số 12-NQ/TW ngày 03/6/2017`],1],
+[142,5,`Trong điều kiện kinh tế thị trường, sự chênh lệch về mức thu nhập giữa các tập thể, các cá nhân là:`,[`Do hạn chế của kinh tế thị trường`,`Tất yếu khách quan`,`Không thể chấp nhận`,`Hiện tượng vĩnh viễn`],1],
+[143,5,`Khi có xung đột giữa các chủ thể kinh tế, cần có sự tham gia hòa giải của các tổ chức xã hội có liên quan, đặc biệt là:`,[`Tòa án`,`Nhà nước`,`Các tổ chức đoàn thể xã hội`,`Tổ chức quốc tế`],1],
+[144,5,`Tổ chức quan trọng nhất bảo vệ quyền lợi người lao động Việt Nam là:`,[`Chính phủ`,`Phòng thương mại và công nghiệp VN`,`Hiệp hội doanh nghiệp`,`Công đoàn`],3],
+[145,5,`Kinh tế thị trường định hướng xã hội chủ nghĩa Việt Nam là nền kinh tế:`,[`Kế thừa những mặt tích cực của kinh tế thị trường TBCN để phát triển.`,`Bao hàm đầy đủ các đặc trưng vốn có của kinh tế thị trường nói chung, vừa có đặc trưng riêng của Việt Nam.`,`Kinh tế thị trường xã hội, vừa quan tâm mục tiêu phát triển kinh tế, vừa chú trọng công bằng xã hội.`,`Kinh tế thị trường tự do kết hợp vai trò quản lý vĩ mô của nhà nước.`],1],
+[146,5,`Vai trò của kinh tế nhà nước trong nền kinh tế thị trường định hướng xã hội chủ nghĩa Việt Nam là:`,[`Giữ vai trò chủ đạo`,`Quyết định nền kinh tế`,`Động lực quan trọng của nền kinh tế`,`Giữ vai trò nền tảng quyết định`],0],
+[147,5,`Vai trò của kinh tế tư nhân trong nền kinh tế thị trường định hướng xã hội chủ nghĩa Việt Nam là:`,[`Giữ vai trò nền tảng quyết định`,`Giữ vai trò chủ đạo`,`Một động lực quan trọng`,`Quyết định nền kinh tế`],2],
+[148,5,`Mối quan hệ giữa thể chế kinh tế và thể chế là:`,[`Thể chế kinh tế là một bộ phận của thể chế.`,`Tách rời nhau, không liên hệ gì với nhau.`,`Thể chế kinh tế quyết định thể chế xã hội.`,`Thể chế là một bộ phận của thể chế kinh tế.`],0],
+[149,5,`Thể chế kinh tế thị trường định hướng xã hội chủ nghĩa là:`,[`Đặc trưng riêng có của Việt Nam.`,`Kết hợp hài hòa giữa thể chế kinh tế các nước trên thế giới.`,`Nhằm tạo ra sự khác biệt giữa kinh tế Việt Nam và kinh tế thế giới.`,`Sự vận dụng thể chế kinh tế thị trường TBCN.`],0],
+[150,5,`Trình độ, năng lực tổ chức và quản lý nền kinh tế thị trường của nhà nước thể hiện ở mặt nào?`,[`Năng lực xây dựng và thực thi thể chế`,`Tốc độ tăng trưởng kinh tế`,`Sự phát triển kinh tế – xã hội của đất nước`,`Năng lực hoàn thiện thể chế`],0],
+[151,5,`Các yếu tố của thị trường bao gồm:`,[`Cung, cầu, giá cả; quan hệ hàng hóa – tiền tệ; quan hệ giá trị, giá trị sử dụng; quan hệ hợp tác, cạnh tranh; quan hệ trong nước, ngoài nước…`,`Quan hệ cạnh tranh; thị trường tư liệu sản xuất, tư liệu tiêu dùng; thị trường trong nước, quốc tế; thị trường đầu vào, đầu ra…`,`Quan hệ hàng hóa – tiền tệ; quan hệ giá trị, giá trị sử dụng; thị trường tư liệu sản xuất, tư liệu tiêu dùng; thị trường đầu vào, đầu ra…`,`Quan hệ hàng hóa – tiền tệ; quan hệ giá trị, giá trị sử dụng; quan hệ hợp tác, cạnh tranh; thị trường tư liệu sản xuất, tư liệu tiêu dùng…`],0],
+[152,5,`Xuyên suốt quá trình tồn tại của con người và đời sống xã hội thì lợi ích vật chất có vai trò như thế nào đối với việc thúc đẩy hoạt động của mỗi cá nhân, tổ chức, xã hội?`,[`Rất quan trọng`,`Đóng vai trò cơ bản`,`Quyết định`,`Là tiền đề, cơ sở`],2],
+[153,5,`Bản chất của lợi ích kinh tế phản ánh:`,[`Khát vọng lớn lao của các quan hệ giữa các chủ thể trong nền sản xuất xã hội.`,`Phương thức hành động của các chủ thể kinh tế trong nền sản xuất xã hội.`,`Mục đích và động cơ của các quan hệ giữa các chủ thể trong nền sản xuất xã hội.`,`Mục đích cao nhất của các quan hệ giữa các chủ thể trong nền sản xuất xã hội.`],2],
+[154,5,`Trong các hình thức lợi ích kinh tế, hình thức lợi ích đóng vai trò cơ sở, nền tảng là:`,[`Lợi ích tập thể`,`Lợi ích cá nhân`,`Lợi ích doanh nghiệp`,`Lợi ích cộng đồng`],1],
+[155,5,`Điền từ thích hợp vào dấu (…): Lợi ích là sự thỏa mãn nhu cầu của con người mà sự thỏa mãn nhu cầu này phải được nhận thức và đặt trong mối quan hệ ……… ứng với trình độ ……… nhất định của nền sản xuất xã hội đó.`,[`Xã hội / phát triển`,`Kinh tế / lực lượng sản xuất`,`Xã hội / quan hệ sản xuất`,`Kinh tế / phát triển`],0],
+[156,5,`Lợi ích kinh tế đề cập đến:`,[`Lợi ích tinh thần`,`Lợi ích vật chất`,`Lợi ích tổng thể`,`Lợi ích lâu dài`],1],
+[157,5,`Xuyên suốt quá trình tồn tại của con người và đời sống xã hội thì lợi ích vật chất có vai trò như thế nào đối với thúc đẩy hoạt động của mỗi cá nhân, tổ chức, xã hội?`,[`Đóng vai trò cơ bản`,`Rất quan trọng`,`Quyết định`,`Là tiền đề, cơ sở`],2],
+[158,5,`Lợi ích kinh tế là lợi ích vật chất mà con người thu được khi:`,[`Con người buôn bán, lưu thông`,`Con người thực hiện hoạt động`,`Con người thực hiện hoạt động kinh tế`,`Con người hoạt động sản xuất kinh doanh`],2],
+[159,5,`Bản chất của lợi ích kinh tế phản ánh:`,[`Phương thức hành động của các chủ thể kinh tế trong nền sản xuất xã hội.`,`Mục đích và động cơ của các quan hệ giữa các chủ thể trong nền sản xuất xã hội.`,`Mục đích cao nhất của các quan hệ giữa các chủ thể trong nền sản xuất xã hội.`,`Khát vọng lớn lao của các quan hệ giữa các chủ thể trong nền sản xuất xã hội.`],1],
+[160,5,`Lợi ích của các chủ thể trong nền sản xuất xã hội là:`,[`Gắn với các chủ thể kinh tế khác nhau là những lợi ích tương ứng.`,`Như nhau.`,`Hoàn toàn khác nhau.`,`Tùy thuộc vào trình độ phát triển của xã hội mà các chủ thể có lợi ích khác nhau.`],0],
+[161,5,`Lợi ích kinh tế trong nền kinh tế thị trường được thể hiện như thế nào?`,[`Kinh tế thị trường là cơ sở để thực hiện lợi ích kinh tế của các chủ thể.`,`Ở đâu có hoạt động sản xuất kinh doanh, lao động ở đó có quan hệ lợi ích và lợi ích kinh tế.`,`Kinh tế thị trường hướng tối đa hóa lợi ích cho các chủ thể kinh tế.`,`Kinh tế thị trường đặt lợi ích của doanh nghiệp lên hàng đầu, đồng thời chú trọng lợi ích các tầng lớp khác.`],1],
+[162,5,`Trong các hình thức lợi ích kinh tế, hình thức lợi ích đóng vai trò cơ sở, nền tảng là:`,[`Lợi ích doanh nghiệp`,`Lợi ích cộng đồng`,`Lợi ích cá nhân`,`Lợi ích tập thể`],2],
+[163,5,`Khi thực hiện lợi ích kinh tế trong các quan hệ lợi ích chủ yếu, trước hết cần đảm bảo:`,[`Lợi ích cá nhân`,`Nguyên tắc cân bằng tổng quát`,`Lợi ích cộng đồng`,`Nguyên tắc thị trường`],3],
+[164,5,`Ngoài nguyên tắc thị trường, khi thực hiện lợi ích kinh tế trong các quan hệ lợi ích chủ yếu, cần thực hiện theo:`,[`Chính sách của nhà nước và vai trò của lợi ích công cộng`,`Chính sách của nhà nước và vai trò của tập đoàn kinh tế lớn`,`Chính sách của nhà nước và vai trò của các tổ chức xã hội`,`Chính sách nhà nước và vai trò của các chủ thể kinh tế`],2],
+[165,5,`Thể chế là khái niệm dùng để chỉ:`,[`Một chế độ chính trị – xã hội.`,`Quy tắc, luật pháp, bộ máy quản lý và cơ chế vận hành nhằm điều chỉnh các hoạt động của con người trong một chế độ xã hội.`,`Một chế độ xã hội.`,`Hệ thống luật pháp, chủ trương chính sách, tiến bộ khoa học kỹ thuật và cải cách hành chính.`],1],
+[166,5,`Thể chế kinh tế thị trường là sản phẩm của:`,[`Cơ chế thị trường`,`Đảng cầm quyền`,`Nhà nước`,`Lịch sử`],2],
+[167,5,`Nhân tố quyết định chất lượng của thể chế kinh tế là:`,[`Đảng cầm quyền`,`Hệ thống doanh nghiệp`,`Chính phủ`,`Nhà nước`],3],
+[168,5,`Căn cứ vào tính chất và cơ chế vận hành, thị trường được chia thành:`,[`Thị trường cạnh tranh hoàn hảo, thị trường độc quyền, thị trường trong nước, thị trường quốc tế.`,`Thị trường tự do, thị trường độc quyền, thị trường cạnh tranh hoàn hảo, thị trường trong nước, thị trường quốc tế.`,`Thị trường tự do, thị trường có điều tiết, thị trường độc quyền.`,`Thị trường tự do, thị trường có điều tiết, thị trường cạnh tranh hoàn hảo, thị trường cạnh tranh không hoàn hảo.`],3],
+[169,5,`Quyền tài sản của một chủ thể được thể hiện trên các mặt:`,[`Quyền sử dụng, quyền định đoạt, quyền hưởng lợi từ tài sản, mua bán, tặng cho.`,`Quyền sở hữu, quyền sử dụng, quyền định đoạt và hưởng lợi từ tài sản.`,`Quyền sở hữu, quyền sử dụng, mua bán, tặng, cho.`,`Quyền làm chủ tài sản, quyền định đoạt, mua bán, tặng, cho.`],1],
+[170,5,`Chọn phương án sai cho các nhận định sau đây về lý do phải hoàn thiện thể chế kinh tế thị trường định hướng xã hội chủ nghĩa Việt Nam:`,[`Hệ thống thể chế còn kém hiệu lực, hiệu quả, kém đầy đủ các yếu tố thị trường và các loại thị trường.`,`Để sớm thực hiện tốt mục tiêu định hướng xã hội chủ nghĩa.`,`Thể chế kinh tế thị trường định hướng xã hội chủ nghĩa chưa đồng bộ.`,`Để nâng cao năng lực quản lý của nhà nước trong nền kinh tế thị trường định hướng XHCN.`],1],
+[171,5,`Chọn phương án sai cho các nhận định dưới đây về kinh tế thị trường:`,[`Không có mô hình kinh tế thị trường chung cho mọi quốc gia và mọi giai đoạn phát triển.`,`Kinh tế thị trường là sản phẩm của văn minh nhân loại.`,`Kinh tế thị trường định hướng XHCN Việt Nam là một kiểu kinh tế thị trường phù hợp với Việt Nam.`,`Kinh tế thị trường là sản phẩm riêng của hình thái kinh tế – xã hội TBCN.`],3],
+[172,5,`Điền từ thích hợp vào dấu (…): Kinh tế thị trường định hướng XHCN là nền kinh tế vận hành theo ………… đồng thời góp phần hướng tới từng bước xác lập một xã hội dân giàu, nước mạnh, dân chủ, công bằng, văn minh; có sự điều tiết của nhà nước do ………… lãnh đạo.`,[`Sự quản lý của nhà nước / Đảng Cộng sản Việt Nam`,`Cơ chế thị trường / Nhà nước`,`Các quy luật của thị trường / Đảng Cộng sản Việt Nam`,`Định hướng xã hội chủ nghĩa / Đảng Cộng sản Việt Nam`],2],
+[173,5,`Phát triển kinh tế thị trường định hướng xã hội chủ nghĩa Việt Nam là phù hợp với xu hướng phát triển khách quan của Việt Nam, vì:`,[`Kinh tế thị trường là giai đoạn phát triển cao của kinh tế hàng hóa.`,`Ở Việt Nam các điều kiện cho sự hình thành, phát triển kinh tế thị trường đang tồn tại khách quan.`,`Cả a và b đều đúng.`,`Cả a và b đều sai.`],2],
+[174,5,`Chọn đáp án sai cho các nhận định sau đây:`,[`Phát triển kinh tế thị trường sẽ khắc phục được những tiêu cực, hạn chế.`,`Trên thế giới có nhiều mô hình kinh tế thị trường.`,`Kinh tế thị trường luôn là động lực thúc đẩy lực lượng sản xuất phát triển nhanh và có hiệu quả.`,`Kinh tế thị trường sẽ tồn tại lâu dài ở Việt Nam là một tất yếu khách quan.`],0],
+[175,5,`Sự khác biệt cơ bản giữa kinh tế thị trường định hướng XHCN Việt Nam và kinh tế thị trường TBCN là:`,[`Về mục tiêu`,`Về các chủ thể tham gia nền kinh tế`,`Về tự do sản xuất kinh doanh`,`Về sự điều tiết của nhà nước`],0],
+[176,5,`Quan điểm: “sở hữu là cơ sở, là điều kiện của sản xuất”. Nội dung này phản ánh mặt nào của sở hữu:`,[`Nội dung kinh tế`,`Nội dung pháp lý`,`Nội dung chính trị – xã hội`,`Nội dung kinh tế – chính trị`],0],
+[177,5,`Kinh tế thị trường định hướng xã hội chủ nghĩa Việt Nam là nền kinh tế:`,[`Có nhiều thành phần và nhiều mô hình kinh tế`,`Các thành phần kinh tế phát triển tự do trong khuôn khổ pháp luật`,`Đa dạng hình thức sở hữu và nhiều mô hình kinh tế`,`Có nhiều hình thức sở hữu và nhiều thành phần kinh tế`],3],
+
+[178,6,`Con đường công nghiệp hóa theo mô hình Liên Xô cũ thường là:`,[`Ưu tiên phát triển công nghiệp chế biến hàng tiêu dùng.`,`Ưu tiên phát triển công nghệ sản xuất hàng xuất khẩu.`,`Ưu tiên phát triển công nghiệp sản xuất lương thực, thực phẩm.`,`Ưu tiên phát triển công nghiệp nặng.`],3],
+[179,6,`Điền từ thích hợp vào chỗ trống: Công nghiệp hóa, hiện đại hóa là quá trình chuyển đổi ………… các hoạt động sản xuất kinh doanh, dịch vụ và quản lý kinh tế – xã hội, từ sử dụng sức lao động thủ công là chính sang sử dụng phổ biến sức lao động với công nghệ, phương tiện, phương pháp tiên tiến hiện đại; dựa trên sự phát triển của …………, nhằm tạo ra năng suất lao động xã hội cao.`,[`Căn bản, toàn diện / công nghiệp và tiến bộ khoa học công nghệ`,`Căn bản / công nghiệp hiện đại`,`Toàn diện / tiến bộ khoa học công nghệ`,`Toàn diện, sâu sắc / công cụ lao động và tiến bộ khoa học công nghệ`],0],
+[180,6,`Điền từ thích hợp vào chỗ trống: Công nghiệp hóa là quá trình chuyển đổi nền sản xuất xã hội từ dựa trên …………… sang nền sản xuất xã hội dựa chủ yếu trên …………… nhằm tạo ra năng suất lao động xã hội cao.`,[`Lao động tay chân / lao động cơ khí`,`Lao động thủ công / lao động cơ khí hóa, từng bước hiện đại`,`Lao động thủ công / lao động máy móc`,`Lao động thủ công là chính / lao động bằng máy móc`],2],
+[181,6,`Một trong những đặc điểm chủ yếu của CNH, HĐH ở Việt Nam là:`,[`Công nghiệp hóa, hiện đại hóa phải gắn liền với nền kinh tế tri thức.`,`Công nghiệp hóa phải gắn liền với hiện đại hóa.`,`Công nghiệp hóa, hiện đại hóa phải gắn liền với mở cửa hội nhập.`,`Công nghiệp hóa, hiện đại hóa phải gắn liền phát huy nội lực nền kinh tế.`],0],
+[182,6,`Quá trình công nghiệp hóa ở các nước tư bản cổ điển cũng dẫn đến mâu thuẫn giữa các nước tư bản với nhau và mâu thuẫn giữa các nước tư bản với:`,[`Các nước đang phát triển`,`Các nước xã hội chủ nghĩa`,`Các nước thuộc địa`,`Các nước kém phát triển`],2],
+[183,6,`Công nghiệp hóa ở nước Anh được bắt đầu từ ngành công nghiệp nào?`,[`Công nghiệp khai thác`,`Công nghiệp dệt`,`Công nghiệp cơ khí`,`Công nghiệp chế biến`],1],
+[184,6,`Hội nhập kinh tế quốc tế tạo ra cơ hội để các quốc gia giải quyết những vấn đề:`,[`Giai cấp`,`Phân biệt chủng tộc`,`Toàn cầu`,`Quốc gia, dân tộc`],2],
+[185,6,`Chuyển dịch cơ cấu kinh tế theo hướng hiện đại, hiệu quả chính là quá trình:`,[`Tăng tỷ trọng của công nghiệp, giảm tỷ trọng ngành nông nghiệp trong GDP.`,`Tăng tỷ trọng của những ngành sáng tạo, giảm tỷ trọng những ngành thủ công truyền thống trong GDP.`,`Tăng tỷ trọng của ngành dịch vụ, giảm tỷ trọng ngành nông nghiệp và công nghiệp trong GDP.`,`Tăng tỷ trọng của ngành công nghiệp và dịch vụ, giảm tỷ trọng ngành nông nghiệp trong GDP.`],3],
+[186,6,`Chọn từ đúng điền vào chỗ trống (…): Trong nền kinh tế tri thức, ………… trở thành lực lượng sản xuất trực tiếp, là vốn quý nhất, là nguồn lực quan trọng hàng đầu, quyết định sự tăng trưởng và phát triển kinh tế.`,[`Nguồn nhân lực`,`Tài chính`,`Tri thức`,`Khoa học công nghệ`],2],
+[187,6,`Quá trình công nghiệp hóa ở các nước tư bản cổ điển đã dẫn đến mâu thuẫn gay gắt giữa tư bản và lao động, làm bùng nổ những cuộc đấu tranh chống lại nhà tư bản của giai cấp/tầng lớp nào?`,[`Tầng lớp trí thức`,`Giai cấp tiểu tư sản`,`Tầng lớp trung lưu`,`Giai cấp công nhân`],3],
+[188,6,`Thời gian để tiến hành công nghiệp hóa theo mô hình công nghiệp hóa cổ điển của các nước tư bản chủ nghĩa là:`,[`40 – 60 năm`,`70 – 90 năm`,`60 – 80 năm`,`50 – 70 năm`],2],
+[189,6,`Một trong những nhiệm vụ mà Việt Nam cần phải thực hiện để thích ứng với những tác động tiêu cực từ cách mạng công nghiệp lần thứ tư là:`,[`Phát triển nguồn nhân lực, đặc biệt là nguồn nhân lực chất lượng cao.`,`Đẩy mạnh nghiên cứu và ứng dụng khoa học công nghệ hiện đại.`,`Chủ động hội nhập sâu với nền kinh tế thế giới.`,`Tăng cường thu hút đầu tư trực tiếp nước ngoài để chuyển giao khoa học công nghệ.`],0],
+[190,6,`Thích ứng và thực hiện cách mạng công nghiệp 4.0 ở Việt Nam, khâu đột phá là cần thực hiện và ứng dụng:`,[`Công nghệ cao`,`Công nghệ vật liệu`,`Công nghệ thông tin`,`Công nghệ sinh học`],2],
+[191,6,`Nhật Bản và các nước công nghiệp mới (NICs) đã sử dụng con đường nào để tiến hành công nghiệp hóa, hiện đại hóa:`,[`Con đường thứ ba`,`Con đường thứ tư`,`Con đường thứ nhất`,`Con đường thứ hai`],0],
+[192,6,`Điền từ thích hợp vào chỗ trống: Kinh tế tri thức là nền kinh tế trong đó …………… tri thức giữ vai trò quyết định nhất đối với sự phát triển kinh tế, tạo ra của cải, nâng cao chất lượng cuộc sống.`,[`Sự phổ cập tri thức và sử dụng`,`Sự sản sinh ra, phổ cập và sử dụng`,`Sự sản sinh ra tri thức và phổ cập`,`Sự sản sinh ra tri thức và sử dụng`],1],
+[193,6,`Yếu tố quyết định quá trình công nghiệp hóa, hiện đại hóa ở Việt Nam thích ứng với tác động của cuộc cách mạng công nghiệp lần thứ tư là:`,[`Con người`,`Công nghệ sinh học`,`Thể chế kinh tế`,`Công nghệ số`],0],
+[194,6,`Đặc trưng của cuộc cách mạng công nghiệp lần thứ IV là:`,[`Liên kết giữa thế giới thực và ảo, để thực hiện công việc thông minh và hiệu quả nhất.`,`Sử dụng robot và công nghệ thông tin để tự động hóa sản xuất, liên kết quốc tế.`,`Sử dụng công nghệ thông tin và máy tính để tự động hóa sản xuất.`,`Sử dụng công nghệ thông tin để tự động hóa sản xuất.`],0],
+[195,6,`Việt Nam chính thức trở thành thành viên của Tổ chức Thương mại Thế giới (WTO) vào năm nào?`,[`2008`,`2007`,`2006`,`2009`],1],
+[196,6,`Mô hình công nghiệp hóa cổ điển được thực hiện gắn liền với cuộc cách mạng công nghiệp nào?`,[`Cách mạng công nghiệp lần thứ III`,`Cách mạng công nghiệp lần thứ IV`,`Cách mạng công nghiệp lần thứ II`,`Cách mạng công nghiệp lần thứ I`],3],
+[197,6,`Mô hình công nghiệp hóa ở Nhật Bản và các nước công nghiệp mới (NICs) còn được gọi là mô hình công nghiệp hóa:`,[`Kinh tế tri thức`,`Rút ngắn`,`Đi tắt, đón đầu công nghệ mới`,`Dựa trên công nghệ thông tin`],1],
+[198,6,`Cách mạng công nghiệp lần I khởi phát từ nước nào và trong khoảng thời gian nào?`,[`Nước Đức, từ giữa thế kỷ XVIII đến giữa thế kỷ XIX`,`Nước Anh, từ giữa thế kỷ XVIII đến giữa thế kỷ XIX`,`Nước Mỹ, từ giữa thế kỷ XVII đến đầu thế kỷ XVIII`,`Nước Pháp, từ giữa thế kỷ XVII đến đầu thế kỷ XVIII`],1],
+[199,6,`Nội dung cơ bản của cuộc cách mạng công nghiệp lần thứ nhất là:`,[`Thực hiện cơ khí hóa từng phần, kết hợp với lao động thủ công.`,`Thực hiện cơ khí hóa sản xuất thay thế cho lao động thủ công.`,`Chuyển từ lao động thủ công thành lao động sử dụng máy móc, thực hiện cơ giới hóa sản xuất bằng việc sử dụng năng lượng nước và hơi nước.`,`Chuyển từ lao động thủ công thành lao động áp dụng trình độ cơ khí hóa sản xuất.`],2],
+[200,6,`Cách mạng công nghiệp lần II diễn ra vào khoảng thời gian nào?`,[`Cuối thế kỷ XVIII đến đầu thế kỷ XIX`,`Cuối thế kỷ XIX đến đầu thế kỷ XX`,`Cuối thế kỷ XVIII đến cuối thế kỷ XIX`,`Giữa thế kỷ XVIII đến giữa thế kỷ XIX`],1],
+[201,6,`Nghiên cứu cuộc cách mạng công nghiệp lần thứ I, Mác đã khái quát tính quy luật của cách mạng công nghiệp qua 3 giai đoạn phát triển là:`,[`Hợp tác hóa sản xuất, điện khí hóa và đại công nghiệp cơ khí`,`Hợp tác hóa sản xuất, cơ khí hóa và điện khí hóa`,`Hiệp tác giản đơn, công trường thủ công và đại công nghiệp`,`Hiệp tác hóa sản xuất, cơ giới hóa và tự động hóa`],2],
+[202,6,`Nội dung của cuộc cách mạng công nghiệp lần thứ II là:`,[`Chuyển từ nền sản xuất cơ khí sang nền sản xuất điện khí và sang giai đoạn tự động hóa sản xuất.`,`Chuyển nền sản xuất cơ khí sang nền sản xuất cơ khí hóa và tự động hóa sản xuất.`,`Chuyển nền sản xuất cơ khí sang nền sản xuất điện – cơ khí và sang giai đoạn tự động hóa cục bộ của sản xuất.`,`Chuyển từ cơ khí hóa sang điện khí hóa và tự động hóa.`],2],
+[203,6,`Đặc trưng cơ bản của cuộc cách mạng công nghiệp lần thứ III là:`,[`Sự xuất hiện công nghệ thông tin, tự động hóa sản xuất`,`Sự xuất hiện của Internet và công nghệ thông tin`,`Sự xuất hiện của nền kinh tế tri thức`,`Sự xuất hiện của công nghệ thông tin, internet và tự động hóa`],0],
+[204,6,`Cách mạng công nghiệp lần thứ 4 được đề cập vào khoảng thời gian nào:`,[`Tại Hội chợ triển lãm công nghệ Hannover – Đức, năm 2011`,`Tại Hội chợ triển lãm công nghệ London – Anh, năm 2012`,`Tại Hội nghị khoa học công nghệ Tokyo – Nhật Bản, năm 2009`,`Tại Hội nghị khoa học công nghệ New York – Mỹ, năm 2010`],0],
+[205,6,`Đặc trưng của cuộc cách mạng công nghiệp lần thứ I là:`,[`Sử dụng động cơ đốt trong để cơ giới hóa sản xuất.`,`Sử dụng động cơ hơi nước để tự động hóa sản xuất.`,`Sử dụng năng lượng nước và hơi nước để cơ khí hóa sản xuất.`,`Sử dụng năng lượng hơi nước để tự động hóa từng phần trong sản xuất.`],2],
+[206,6,`Đặc trưng của cuộc cách mạng công nghiệp lần thứ II là:`,[`Sử dụng năng lượng nước và hơi nước để cơ khí hóa sản xuất và tự động hóa từng phần.`,`Sử dụng động cơ đốt trong để cơ giới hóa sản xuất.`,`Sử dụng năng lượng hơi nước để tự động hóa từng phần trong sản xuất.`,`Sử dụng năng lượng điện và động cơ điện để tạo ra dây chuyền sản xuất hàng loạt.`],3],
+[207,6,`Đặc trưng của cuộc cách mạng công nghiệp lần thứ III là:`,[`Sử dụng công nghệ thông tin để tự động hóa sản xuất.`,`Sử dụng robot và công nghệ thông tin để tự động hóa sản xuất.`,`Sử dụng công nghệ thông tin và máy tính để tự động hóa sản xuất.`,`Sử dụng năng lượng điện và động cơ điện để tạo ra dây chuyền sản xuất hàng loạt.`],0],
+[208,6,`Chọn từ đúng để điền vào dấu (…): Hội nhập kinh tế quốc tế của một quốc gia là quá trình quốc gia đó thực hiện …………… nền kinh tế của mình với nền kinh tế thế giới dựa trên sự …………… lợi ích đồng thời tuân thủ các chuẩn mực quốc tế chung.`,[`Gắn kết / chia sẻ`,`Liên kết / chia sẻ`,`Gắn kết / thống nhất`,`Hợp tác / chia sẻ`],0],
+[209,6,`Điền từ thích hợp vào chỗ trống (…): Toàn cầu hóa ………… là xu thế nổi trội nhất, nó vừa là trung tâm, vừa là cơ sở cũng là động lực thúc đẩy toàn cầu hóa các lĩnh vực khác.`,[`Kinh tế`,`Quốc phòng an ninh`,`Chính trị`,`Văn hóa – xã hội`],0],
+[210,6,`Chọn phương án sai cho các phát biểu dưới đây về toàn cầu hóa:`,[`Toàn cầu hóa kinh tế chính là sự gia tăng nhanh chóng các hoạt động kinh tế vượt qua mọi biên giới quốc gia, khu vực.`,`Toàn cầu hóa tạo ra liên kết và sự phụ thuộc lẫn nhau ngày càng tăng giữa các quốc gia trên quy mô toàn cầu.`,`Toàn cầu hóa diễn ra trên nhiều phương diện: kinh tế, chính trị, văn hóa, xã hội…`,`Toàn cầu hóa phải dựa trên nội lực kinh tế và quốc phòng an ninh đủ mạnh để bảo vệ quốc gia, dân tộc.`],3],
+[211,6,`Chọn phương án sai cho các phát biểu dưới đây về hội nhập kinh tế quốc tế:`,[`Hội nhập kinh tế quốc tế là cơ hội để các nước đang và kém phát triển tiếp cận và sử dụng được các nguồn lực bên ngoài như tài chính, khoa học công nghệ…`,`Hội nhập kinh tế quốc tế là động lực mạnh mẽ cho sự phát triển kinh tế – xã hội của mọi quốc gia, đặc biệt là các quốc gia đang và kém phát triển…`,`Hội nhập kinh tế quốc tế là con đường có thể giúp cho các nước đang và kém phát triển tận dụng thời cơ phát triển rút ngắn, thu hẹp khoảng cách…`,`Hội nhập kinh tế quốc tế giúp mở cửa thị trường, thu hút vốn, thực hiện công nghiệp hóa, tăng tích lũy, tạo nhiều cơ hội việc làm…`],1],
+[212,6,`Chọn từ đúng điền vào chỗ trống: Đặc trưng của hội nhập kinh tế quốc tế là sự hình thành các ………… quốc tế và khu vực để tạo ra sân chơi chung cho các nước.`,[`Liên kết chính trị`,`Liên kết quốc phòng an ninh`,`Liên kết kinh tế`,`Liên kết văn hóa – xã hội`],2],
+[213,6,`Hãy sắp xếp mức độ hội nhập kinh tế quốc tế theo thứ tự từ thấp đến cao:`,[`Liên minh kinh tế – tiền tệ; thỏa thuận thương mại ưu đãi PTA; khu vực mậu dịch tự do FTA; liên minh thuế quan CU; thị trường chung.`,`Khu vực mậu dịch tự do FTA; liên minh thuế quan CU; thị trường chung; liên minh kinh tế – tiền tệ; thỏa thuận thương mại ưu đãi PTA.`,`Liên minh thuế quan CU; thị trường chung; liên minh kinh tế – tiền tệ; thỏa thuận thương mại ưu đãi PTA; khu vực mậu dịch tự do FTA.`,`Thỏa thuận thương mại ưu đãi PTA; khu vực mậu dịch tự do FTA; liên minh thuế quan CU; thị trường chung; liên minh kinh tế – tiền tệ.`],3],
+[214,6,`Chọn đáp án sai trong các phát biểu dưới đây về hội nhập của Việt Nam:`,[`Hội nhập kinh tế quốc tế cần có sự chuẩn bị các điều kiện trong nội bộ nền kinh tế cũng như các mối quan hệ quốc tế thích hợp.`,`Hội nhập là tất yếu, vì vậy phải tiến hành bằng mọi giá để thực hiện thành công.`,`Hội nhập kinh tế quốc tế của Việt Nam phải được cân nhắc với lộ trình và cách thức tối ưu.`,`Hội nhập là con đường tất yếu, vì vậy cần chuẩn bị các điều kiện để thực hiện hội nhập hiệu quả, thành công.`],1],
+[215,6,`Chọn từ đúng điền vào chỗ trống (…): Hội nhập quốc tế toàn diện là sự hội nhập của toàn xã hội vào cộng đồng quốc tế, trong đó doanh nghiệp và đội ngũ …………… sẽ là lực lượng nòng cốt.`,[`Doanh nhân`,`Trí thức`,`Công nhân`,`Thương nhân`],0],
+[216,6,`Chọn từ đúng điền vào chỗ trống: Khi đã có độc lập tự chủ về chính trị thì nội dung cơ bản về độc lập tự chủ của một quốc gia là xây dựng …………… độc lập tự chủ.`,[`Văn hóa`,`Kinh tế`,`Xã hội`,`Quốc phòng an ninh`],1],
+[217,6,`Giữa độc lập, tự chủ và hội nhập quốc tế có mối quan hệ:`,[`Độc lập, tự chủ là cơ sở, tiền đề để thực hiện hội nhập kinh tế quốc tế và hội nhập quốc tế quyết định sự giàu mạnh của đất nước.`,`Độc lập, tự chủ phải được thực hiện mới có quan hệ quốc tế.`,`Biện chứng với nhau, tạo tiền đề cho nhau phát triển nhằm thực hiện mục tiêu dân giàu nước mạnh, dân chủ, công bằng, văn minh.`,`Biện chứng với nhau, vừa tạo tiền đề cho nhau và phát huy lẫn nhau, vừa thống nhất với nhau trong việc thực hiện các mục tiêu cơ bản của cách mạng và lợi ích căn bản của đất nước, của dân tộc.`],3],
+[218,6,`Việt Nam gia nhập Hiệp hội các quốc gia Đông Nam Á (ASEAN) vào năm nào?`,[`1995`,`1994`,`1997`,`1996`],0],
+[219,6,`Việt Nam tham gia Diễn đàn Hợp tác Kinh tế châu Á – Thái Bình Dương (APEC) vào năm nào?`,[`2001`,`2000`,`1999`,`1998`],3],
+[220,6,`Chọn từ đúng điền vào chỗ trống: “Phát huy …………… là yếu tố quyết định, đồng thời tranh thủ ngoại lực và sức mạnh thời đại là yếu tố quan trọng để phát triển nhanh, bền vững và xây dựng nền kinh tế độc lập, tự chủ”.`,[`Bản sắc và truyền thống dân tộc`,`Tập quán và văn hóa dân tộc`,`Nội lực và sức mạnh dân tộc`,`Đoàn kết và ý chí dân tộc`],2],
+[221,6,`Chọn từ đúng điền vào chỗ trống: Cuộc cách mạng công nghiệp lần thứ nhất đã tạo ra cơ sở vật chất kỹ thuật cho …………… và khẳng định sự thắng lợi của nó đối với ……………`,[`Chủ nghĩa tư bản / chế độ phong kiến`,`Chủ nghĩa cộng sản / chủ nghĩa tư bản`,`Chủ nghĩa cộng sản / chế độ phong kiến`,`Chế độ phong kiến / chế độ chiếm hữu nô lệ`],0],
+[222,6,`Chọn từ đúng điền vào chỗ trống: Các xu thế công nghệ cũng đang mở ra nhiều cơ hội cho các doanh nghiệp, đặc biệt là …………… có thể khởi nghiệp sáng tạo, có cơ hội thâm nhập thị trường với nhiều sản phẩm, dịch vụ công nghệ mang tính đột phá.`,[`Doanh nghiệp lớn`,`Tập đoàn đa quốc gia`,`Doanh nghiệp phi lợi nhuận`,`Doanh nghiệp nhỏ và vừa`],3],
+[223,6,`Chọn từ đúng điền vào chỗ trống: “Phát huy nội lực và sức mạnh dân tộc là yếu tố quyết định, đồng thời tranh thủ …………… là yếu tố quan trọng để phát triển nhanh, bền vững và xây dựng nền kinh tế độc lập, tự chủ”.`,[`Ngoại lực và sức mạnh thời đại`,`Ngoại lực và sức mạnh ý thức`,`Ngoại lực và công nghệ nước ngoài`,`Ngoại lực và nhân công nước ngoài`],0],
+[224,6,`Công nghiệp hóa ở nước Anh được bắt đầu từ ngành công nghiệp nhẹ, mà trực tiếp là ngành công nghiệp dệt, vì:`,[`Vốn đầu tư ít, thu lợi nhuận dần dần`,`Vốn đầu tư ít, tỷ suất lợi nhuận cao`,`Vốn đầu tư ít, dễ thay đổi`,`Vốn đầu tư ít, thu lợi nhuận nhanh`],3],
+[225,6,`Mục tiêu của công nghiệp hóa, hiện đại hóa nền kinh tế quốc dân ở nước ta là nhằm xây dựng chủ nghĩa xã hội, vì vậy phải củng cố và tăng cường hoàn thiện:`,[`Cơ sở hạ tầng`,`Lực lượng sản xuất`,`Kiến trúc thượng tầng`,`Quan hệ sản xuất`],3],
+[226,6,`Cuộc cách mạng công nghiệp lần thứ nhất đã hình thành hai giai cấp cơ bản trong xã hội là:`,[`Vô sản và trí thức`,`Tư sản và tiểu tư sản`,`Tư sản và vô sản`,`Địa chủ với nông dân`],2]
+];
+
+const QUESTIONS = RAW_QUESTIONS.map(r => ({
+  id: r[0], chapter: r[1], text: r[2], options: r[3], answer: r[4]
+}));
+
+const LETTERS = [`A`, `B`, `C`, `D`];
+const SRS_INTERVALS = [3, 7]; // Sai -> sau 3 lượt nhắc Vòng 1 -> đúng -> sau 7 lượt nhắc Vòng 2 -> đúng hoàn toàn
+
+let appState = {
+  mode: `smart`,
+  chapter: `all`,
+  currentId: 1,
+  stepCount: 0,
+  streak: 0,
+  totalAttempts: 0,
+  totalCorrect: 0,
+  history: [], // recent question IDs
+  // records[id] = { status: 'unseen'|'mastered'|'srs', srsStage: 0|1|2, dueAtStep: number, wrongCount: number, lastChoice: number|null }
+  records: {}
+};
+
+let currentSessionAnswered = false;
+let currentSearch = ``;
+let randomOrder = [];
+
+function getRecord(id) {
+  return appState.records[id] || { status: `unseen`, srsStage: 0, dueAtStep: 0, wrongCount: 0, lastChoice: null };
+}
+
+function getFilteredQuestions() {
+  const ch = appState.chapter;
+  const qTerm = currentSearch.trim().toLowerCase();
+  return QUESTIONS.filter(q => {
+    if (ch !== `all` && String(q.chapter) !== String(ch)) return false;
+    if (qTerm) {
+      const idMatch = String(q.id) === qTerm || (`câu ` + q.id) === qTerm;
+      const textMatch = q.text.toLowerCase().includes(qTerm);
+      if (!idMatch && !textMatch) return false;
+    }
+    return true;
+  });
+}
+
+function getSrsQueue(onlyCurrentScope) {
+  const list = onlyCurrentScope ? getFilteredQuestions() : QUESTIONS;
+  return list
+    .map(q => ({ q, rec: getRecord(q.id) }))
+    .filter(item => item.rec.status === `srs`)
+    .sort((a, b) => a.rec.dueAtStep - b.rec.dueAtStep || a.q.id - b.q.id);
+}
+
+function isDue(rec) {
+  return rec.status === `srs` && appState.stepCount >= rec.dueAtStep;
+}
+
+function getDueCount() {
+  return QUESTIONS.filter(q => isDue(getRecord(q.id))).length;
+}
+
+async function saveAppState() {
+  const statusEl = document.getElementById(`sync-status`);
+  try {
+    if (window.notebookAppApi && typeof window.notebookAppApi.setAppState === `function`) {
+      await window.notebookAppApi.setAppState(appState);
+      if (statusEl) statusEl.textContent = `Đã lưu tự động • Bước #${appState.stepCount}`;
+    }
+  } catch (e) {
+    if (statusEl) statusEl.textContent = `Đang hoạt động (chế độ cục bộ)`;
+  }
+}
+
+async function loadAppState() {
+  const statusEl = document.getElementById(`sync-status`);
+  try {
+    if (window.notebookAppApi && typeof window.notebookAppApi.getAppState === `function`) {
+      const saved = await window.notebookAppApi.getAppState();
+      if (saved && typeof saved === `object` && saved.records) {
+        appState = Object.assign(appState, saved);
+        if (statusEl) statusEl.textContent = `Đã khôi phục tiến độ • Bước #${appState.stepCount}`;
+      }
+    }
+  } catch (e) {
+    if (statusEl) statusEl.textContent = `Sẵn sàng luyện tập`;
+  }
+}
+
+function ensureValidCurrentId() {
+  const pool = getFilteredQuestions();
+  if (pool.length === 0) return;
+  if (appState.mode === `srs`) {
+    const srsPool = getSrsQueue(true);
+    if (srsPool.length > 0 && !srsPool.some(i => i.q.id === appState.currentId)) {
+      appState.currentId = srsPool[0].q.id;
+    }
+    return;
+  }
+  if (!pool.some(q => q.id === appState.currentId)) {
+    appState.currentId = pool[0].id;
+  }
+}
+
+function renderAll() {
+  ensureValidCurrentId();
+  const modeSel = document.getElementById(`mode-select`);
+  const chSel = document.getElementById(`chapter-select`);
+  if (modeSel) modeSel.value = appState.mode;
+  if (chSel) chSel.value = appState.chapter;
+  renderStats();
+  renderQuestion();
+  renderSrsPanel();
+  renderChapterProgress();
+  renderMatrix();
+}
+
+function renderStats() {
+  let mastered = 0;
+  let srsCount = 0;
+  let dueCount = 0;
+  for (const q of QUESTIONS) {
+    const r = getRecord(q.id);
+    if (r.status === `mastered`) mastered++;
+    else if (r.status === `srs`) {
+      srsCount++;
+      if (isDue(r)) dueCount++;
+    }
+  }
+  const elMastered = document.getElementById(`stat-mastered`);
+  const elPct = document.getElementById(`stat-mastered-pct`);
+  const elSrs = document.getElementById(`stat-srs-count`);
+  const elDue = document.getElementById(`stat-srs-due`);
+  const elAcc = document.getElementById(`stat-accuracy`);
+  const elAtt = document.getElementById(`stat-attempts`);
+  const elStreak = document.getElementById(`stat-streak`);
+  const btnDue = document.getElementById(`btn-review-due`);
+
+  if (elMastered) elMastered.textContent = `${mastered} / ${QUESTIONS.length}`;
+  if (elPct) elPct.textContent = `${Math.round((mastered / QUESTIONS.length) * 100)}% bộ câu hỏi đã làm đúng`;
+  if (elSrs) elSrs.textContent = String(srsCount);
+  if (elDue) elDue.textContent = `${dueCount} câu đang đến hạn nhắc lại`;
+  const acc = appState.totalAttempts > 0 ? Math.round((appState.totalCorrect / appState.totalAttempts) * 100) : 0;
+  if (elAcc) elAcc.textContent = `${acc}%`;
+  if (elAtt) elAtt.textContent = `${appState.totalAttempts} lượt trả lời đã ghi nhận`;
+  if (elStreak) elStreak.textContent = String(appState.streak);
+  if (btnDue) {
+    btnDue.textContent = dueCount > 0 ? `Ôn câu đến hạn (${dueCount})` : `Hàng đợi ôn (${srsCount})`;
+    btnDue.disabled = srsCount === 0;
+  }
+}
+
+function renderQuestion() {
+  const qStem = document.getElementById(`q-stem`);
+  const qOpts = document.getElementById(`q-options`);
+  const qFb = document.getElementById(`q-feedback`);
+  const qChTag = document.getElementById(`q-chapter-tag`);
+  const qStTag = document.getElementById(`q-status-tag`);
+  const qNumLbl = document.getElementById(`q-number-label`);
+
+  const pool = getFilteredQuestions();
+  if (pool.length === 0) {
+    if (qStem) qStem.textContent = `Không tìm thấy câu hỏi phù hợp với bộ lọc tìm kiếm.`;
+    if (qOpts) qOpts.innerHTML = `<div class="empty-note">Hãy xóa từ khóa tìm kiếm hoặc chọn phạm vi Tất cả 6 chương.</div>`;
+    if (qFb) qFb.hidden = true;
+    return;
+  }
+
+  if (appState.mode === `srs` && getSrsQueue(true).length === 0) {
+    if (qChTag) qChTag.textContent = appState.chapter === `all` ? `Toàn bộ 6 chương` : `Chương ${appState.chapter}`;
+    if (qStTag) {
+      qStTag.className = `tag tag-mastered`;
+      qStTag.textContent = `Hoàn thành`;
+    }
+    if (qNumLbl) qNumLbl.textContent = `0 câu sai`;
+    if (qStem) qStem.textContent = `Tuyệt vời! Bạn không còn câu nào trong hàng đợi nhắc lại ở phạm vi này.`;
+    if (qOpts) qOpts.innerHTML = `<div class="empty-note">Mọi câu sai đã được bạn trả lời đúng hoàn toàn qua đủ chu kỳ ôn tập. Hãy chuyển sang chế độ Thông minh để tiếp tục các câu mới.</div>`;
+    if (qFb) qFb.hidden = true;
+    return;
+  }
+
+  const q = QUESTIONS.find(item => item.id === appState.currentId) || pool[0];
+  const rec = getRecord(q.id);
+
+  if (qChTag) qChTag.textContent = `Chương ${q.chapter}`;
+  if (qNumLbl) qNumLbl.textContent = `Câu ${String(q.id).padStart(3, `0`)} / 226`;
+
+  if (qStTag) {
+    if (rec.status === `srs`) {
+      qStTag.className = `tag tag-srs`;
+      const cycleText = rec.srsStage === 1 ? `Nhắc lại Vòng 1/2` : `Nhắc lại Vòng 2/2`;
+      qStTag.textContent = isDue(rec) ? `Đến hạn • ${cycleText}` : `${cycleText} (sai ${rec.wrongCount} lần)`;
+    } else if (rec.status === `mastered`) {
+      qStTag.className = `tag tag-mastered`;
+      qStTag.textContent = `Đã thuộc hoàn toàn`;
+    } else {
+      qStTag.className = `tag tag-new`;
+      qStTag.textContent = `Câu chưa làm`;
+    }
+  }
+
+  if (qStem) qStem.textContent = `Câu ${q.id}: ${q.text}`;
+  if (qOpts) {
+    qOpts.innerHTML = ``;
+    q.options.forEach((optText, idx) => {
+      const btn = document.createElement(`button`);
+      btn.type = `button`;
+      btn.className = `option-btn`;
+      btn.onclick = function() { selectAnswer(idx); };
+      const keySpan = document.createElement(`span`);
+      keySpan.className = `option-key`;
+      keySpan.textContent = LETTERS[idx];
+      const txtSpan = document.createElement(`span`);
+      txtSpan.textContent = optText;
+      btn.appendChild(keySpan);
+      btn.appendChild(txtSpan);
+      qOpts.appendChild(btn);
+    });
+  }
+
+  currentSessionAnswered = false;
+  if (qFb) qFb.hidden = true;
+}
+
+function selectAnswer(chosenIdx) {
+  if (currentSessionAnswered) return;
+  const q = QUESTIONS.find(item => item.id === appState.currentId);
+  if (!q) return;
+
+  currentSessionAnswered = true;
+  appState.stepCount += 1;
+  appState.totalAttempts += 1;
+  appState.history.push(q.id);
+  if (appState.history.length > 30) appState.history.shift();
+
+  const isRight = chosenIdx === q.answer;
+  const prev = getRecord(q.id);
+  const nextRec = Object.assign({}, prev, { lastChoice: chosenIdx });
+
+  const qFb = document.getElementById(`q-feedback`);
+  const qFbTitle = document.getElementById(`q-feedback-title`);
+  const qFbDetail = document.getElementById(`q-feedback-detail`);
+
+  if (isRight) {
+    appState.totalCorrect += 1;
+    appState.streak += 1;
+    if (prev.status === `srs`) {
+      if (prev.srsStage < 2) {
+        nextRec.status = `srs`;
+        nextRec.srsStage = 2;
+        nextRec.dueAtStep = appState.stepCount + SRS_INTERVALS[1];
+        if (qFb) qFb.className = `feedback-banner is-ok`;
+        if (qFbTitle) qFbTitle.textContent = `Chính xác! Đã vượt qua Vòng 1/2.`;
+        if (qFbDetail) qFbDetail.textContent = `Câu ${q.id} sẽ được nhắc lại thêm 1 lần nữa sau ${SRS_INTERVALS[1]} câu để xác nhận bạn đã thuộc hoàn toàn.`;
+      } else {
+        nextRec.status = `mastered`;
+        nextRec.srsStage = 0;
+        nextRec.dueAtStep = 0;
+        if (qFb) qFb.className = `feedback-banner is-ok`;
+        if (qFbTitle) qFbTitle.textContent = `Hoàn toàn chính xác! Đã thuộc xong câu ${q.id}.`;
+        if (qFbDetail) qFbDetail.textContent = `Bạn đã trả lời đúng đủ 2 chu kỳ nhắc lại. Câu này đã được gỡ khỏi hàng đợi câu sai.`;
+      }
+    } else {
+      nextRec.status = `mastered`;
+      nextRec.srsStage = 0;
+      if (qFb) qFb.className = `feedback-banner is-ok`;
+      if (qFbTitle) qFbTitle.textContent = `Chính xác! Đáp án đúng là ${LETTERS[q.answer]}.`;
+      if (qFbDetail) qFbDetail.textContent = `Đã ghi nhận hoàn thành câu ${q.id}.`;
+    }
+  } else {
+    appState.streak = 0;
+    nextRec.status = `srs`;
+    nextRec.srsStage = 1;
+    nextRec.wrongCount = (prev.wrongCount || 0) + 1;
+    nextRec.dueAtStep = appState.stepCount + SRS_INTERVALS[0];
+    if (qFb) qFb.className = `feedback-banner is-err`;
+    if (qFbTitle) qFbTitle.textContent = `Chưa chính xác! Đáp án đúng là ${LETTERS[q.answer]}: ${q.options[q.answer]}`;
+    if (qFbDetail) qFbDetail.textContent = `Đã tự động ghi nhớ câu ${q.id} vào hàng đợi nhắc lại (Chu kỳ 1/2 — sẽ tự động lặp lại sau ${SRS_INTERVALS[0]} câu).`;
+  }
+
+  appState.records[q.id] = nextRec;
+  if (qFb) qFb.hidden = false;
+
+  const optButtons = document.querySelectorAll(`#q-options .option-btn`);
+  optButtons.forEach((btn, idx) => {
+    btn.disabled = true;
+    if (idx === q.answer) btn.classList.add(`is-correct`);
+    else if (idx === chosenIdx && !isRight) btn.classList.add(`is-wrong`);
+  });
+
+  renderStats();
+  renderSrsPanel();
+  renderChapterProgress();
+  renderMatrix();
+  saveAppState();
+}
+
+function nextQuestion() {
+  const pool = getFilteredQuestions();
+  if (pool.length === 0) return;
+
+  if (appState.mode === `srs`) {
+    const srsPool = getSrsQueue(true);
+    if (srsPool.length === 0) {
+      renderQuestion();
+      return;
+    }
+    const other = srsPool.find(i => i.q.id !== appState.currentId);
+    appState.currentId = other ? other.q.id : srsPool[0].q.id;
+    renderAll();
+    saveAppState();
+    return;
+  }
+
+  if (appState.mode === `smart`) {
+    // Check if any SRS question in scope is due (prefer one not just answered)
+    const dueList = getSrsQueue(true).filter(i => isDue(i.rec) && i.q.id !== appState.currentId);
+    if (dueList.length > 0) {
+      appState.currentId = dueList[0].q.id;
+      renderAll();
+      saveAppState();
+      return;
+    }
+    // Otherwise jump to next unseen question, or next sequential
+    const idx = pool.findIndex(q => q.id === appState.currentId);
+    let nextUnseen = pool.slice(idx + 1).find(q => getRecord(q.id).status === `unseen`);
+    if (!nextUnseen) nextUnseen = pool.find(q => getRecord(q.id).status === `unseen` && q.id !== appState.currentId);
+    if (nextUnseen) {
+      appState.currentId = nextUnseen.id;
+    } else {
+      const nextIdx = idx >= 0 ? (idx + 1) % pool.length : 0;
+      appState.currentId = pool[nextIdx].id;
+    }
+    renderAll();
+    saveAppState();
+    return;
+  }
+
+  if (appState.mode === `random`) {
+    const candidates = pool.filter(q => q.id !== appState.currentId);
+    const pickFrom = candidates.length > 0 ? candidates : pool;
+    const rand = pickFrom[Math.floor(Math.random() * pickFrom.length)];
+    appState.currentId = rand.id;
+    renderAll();
+    saveAppState();
+    return;
+  }
+
+  // seq
+  const idx = pool.findIndex(q => q.id === appState.currentId);
+  const nextIdx = idx >= 0 ? (idx + 1) % pool.length : 0;
+  appState.currentId = pool[nextIdx].id;
+  renderAll();
+  saveAppState();
+}
+
+function prevQuestion() {
+  const pool = getFilteredQuestions();
+  if (pool.length === 0) return;
+  const idx = pool.findIndex(q => q.id === appState.currentId);
+  const prevIdx = idx > 0 ? idx - 1 : pool.length - 1;
+  appState.currentId = pool[prevIdx].id;
+  renderAll();
+  saveAppState();
+}
+
+function jumpToQuestion(id) {
+  const q = QUESTIONS.find(item => item.id === id);
+  if (!q) return;
+  if (appState.chapter !== `all` && String(q.chapter) !== String(appState.chapter)) {
+    appState.chapter = `all`;
+  }
+  if (appState.mode === `srs` && getRecord(id).status !== `srs`) {
+    appState.mode = `smart`;
+  }
+  appState.currentId = id;
+  renderAll();
+  saveAppState();
+}
+
+function jumpToNextDue() {
+  const queue = getSrsQueue(false);
+  if (queue.length === 0) return;
+  const dueFirst = queue.find(i => isDue(i.rec)) || queue[0];
+  appState.mode = `srs`;
+  appState.chapter = `all`;
+  appState.currentId = dueFirst.q.id;
+  renderAll();
+  saveAppState();
+}
+
+function changeMode(val) {
+  appState.mode = val;
+  renderAll();
+  saveAppState();
+}
+
+function changeChapter(val) {
+  appState.chapter = val;
+  renderAll();
+  saveAppState();
+}
+
+function onSearchInput(val) {
+  currentSearch = val;
+  renderAll();
+}
+
+function renderSrsPanel() {
+  const box = document.getElementById(`srs-queue-box`);
+  if (!box) return;
+  const queue = getSrsQueue(false);
+  if (queue.length === 0) {
+    box.innerHTML = `<div class="empty-note">Chưa có câu trả lời sai nào. Khi bạn làm sai bất kỳ câu nào, hệ thống sẽ tự động lưu tại đây và lên lịch nhắc lại theo chu kỳ.</div>`;
+    return;
+  }
+  box.innerHTML = ``;
+  queue.forEach(({ q, rec }) => {
+    const btn = document.createElement(`button`);
+    btn.type = `button`;
+    btn.className = `srs-item`;
+    btn.onclick = function() { jumpToQuestion(q.id); };
+
+    const left = document.createElement(`span`);
+    left.className = `srs-item-q`;
+    left.textContent = `Câu ${q.id}: ${q.text}`;
+
+    const badge = document.createElement(`span`);
+    const due = isDue(rec);
+    badge.className = due ? `srs-cycle-badge is-due` : `srs-cycle-badge`;
+    const remain = Math.max(0, rec.dueAtStep - appState.stepCount);
+    badge.textContent = due ? `Đến hạn (V${rec.srsStage}/2)` : `Sau ${remain} câu (V${rec.srsStage}/2)`;
+
+    btn.appendChild(left);
+    btn.appendChild(badge);
+    box.appendChild(btn);
+  });
+}
+
+function renderChapterProgress() {
+  const box = document.getElementById(`chapter-progress-box`);
+  if (!box) return;
+  box.innerHTML = ``;
+  for (let ch = 1; ch <= 6; ch++) {
+    const list = QUESTIONS.filter(q => q.chapter === ch);
+    let ok = 0, srs = 0;
+    for (const q of list) {
+      const r = getRecord(q.id);
+      if (r.status === `mastered`) ok++;
+      else if (r.status === `srs`) srs++;
+    }
+    const okPct = (ok / list.length) * 100;
+    const errPct = (srs / list.length) * 100;
+
+    const row = document.createElement(`div`);
+    row.className = `ch-row`;
+    row.innerHTML = `
+      <div class="ch-row-top">
+        <span><strong>Chương ${ch}</strong> (${list.length} câu)</span>
+        <span style="font-family:var(--font-label); font-size:0.75rem;">${ok} đúng • ${srs} ôn</span>
+      </div>
+      <div class="ch-track">
+        <div class="ch-fill-ok" style="width:${okPct.toFixed(1)}%"></div>
+        <div class="ch-fill-err" style="width:${errPct.toFixed(1)}%"></div>
+      </div>
+    `;
+    box.appendChild(row);
+  }
+}
+
+function renderMatrix() {
+  const box = document.getElementById(`nav-matrix`);
+  const filterSel = document.getElementById(`matrix-filter`);
+  if (!box) return;
+  const filterVal = filterSel ? filterSel.value : `all`;
+  const pool = getFilteredQuestions();
+  box.innerHTML = ``;
+
+  const filtered = pool.filter(q => {
+    const r = getRecord(q.id);
+    if (filterVal === `srs`) return r.status === `srs`;
+    if (filterVal === `unseen`) return r.status === `unseen`;
+    if (filterVal === `ok`) return r.status === `mastered`;
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    box.innerHTML = `<div class="empty-note" style="grid-column:1/-1;">Không có câu hỏi ở bộ lọc này.</div>`;
+    return;
+  }
+
+  filtered.forEach(q => {
+    const r = getRecord(q.id);
+    const btn = document.createElement(`button`);
+    btn.type = `button`;
+    let cls = `q-cell`;
+    if (r.status === `mastered`) cls += ` is-ok`;
+    else if (r.status === `srs`) cls += isDue(r) ? ` is-due` : ` is-srs`;
+    if (q.id === appState.currentId) cls += ` is-current`;
+    btn.className = cls;
+    btn.textContent = String(q.id);
+    btn.title = `Câu ${q.id} (Chương ${q.chapter})`;
+    btn.onclick = function() { jumpToQuestion(q.id); };
+    box.appendChild(btn);
+  });
+}
+
+function handleReset(btn) {
+  if (!btn) return;
+  if (btn.dataset.armed !== `true`) {
+    btn.dataset.armed = `true`;
+    btn.textContent = `Bấm lại để xác nhận xóa`;
+    setTimeout(() => {
+      if (btn.dataset.armed === `true`) {
+        btn.dataset.armed = `false`;
+        btn.textContent = `Đặt lại tiến độ`;
+      }
+    }, 3500);
+    return;
+  }
+  btn.dataset.armed = `false`;
+  btn.textContent = `Đặt lại tiến độ`;
+  appState = {
+    mode: `smart`,
+    chapter: `all`,
+    currentId: 1,
+    stepCount: 0,
+    streak: 0,
+    totalAttempts: 0,
+    totalCorrect: 0,
+    history: [],
+    records: {}
+  };
+  renderAll();
+  saveAppState();
+}
+
+function exportProgressCsv() {
+  const rows = [`Cau,Chuong,TrangThai,VongNhac,SoLanSai,NoiDung`];
+  for (const q of QUESTIONS) {
+    const r = getRecord(q.id);
+    const st = r.status === `mastered` ? `DaThuoc` : (r.status === `srs` ? `DangOn` : `ChuaLam`);
+    const safeText = `"` + q.text.replace(/"/g, `""`) + `"`;
+    rows.push(`${q.id},${q.chapter},${st},${r.srsStage || 0},${r.wrongCount || 0},${safeText}`);
+  }
+  const csv = `\uFEFF` + rows.join(`\n`);
+  if (window.notebookAppApi && typeof window.notebookAppApi.triggerFileDownload === `function`) {
+    window.notebookAppApi.triggerFileDownload({
+      content: csv,
+      contentType: `text/csv`,
+      encoding: `UTF-8`,
+      filename: `tien-do-trac-nghiem-ktct.csv`
+    });
+  }
+}
+
+async function initApp() {
+  await loadAppState();
+  renderAll();
+  if (window.notebookAppApi && typeof window.notebookAppApi.notifyAppReady === `function`) {
+    window.notebookAppApi.notifyAppReady();
+  }
+}
+
+document.addEventListener(`DOMContentLoaded`, initApp);
+</script>
+</body>
+</html>
